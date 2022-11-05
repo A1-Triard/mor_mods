@@ -1,0 +1,87 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: A1
+      description:
+      - Теперь золото имеет вес.
+      records: 11
+  - MAST: Morrowind.esm
+  - DATA: 79765994
+  - MAST: Bloodmoon.esm
+  - DATA: 11801192
+  - MAST: Tribunal.esm
+  - DATA: 6618333
+  
+- MISC:
+  - NAME: Gold_001
+  - MODL: m\Gold_001.NIF
+  - FNAM: Золото
+  - MCDT:
+      weight: 0.01
+      value: 1
+      is_key: false
+  - ITEX: m\Tx_Gold_001.tga
+  
+- MISC:
+  - NAME: Gold_005
+  - MODL: m\Gold_005.NIF
+  - FNAM: Золото
+  - MCDT:
+      weight: 0.05
+      value: 5
+      is_key: false
+  - ITEX: m\Tx_Gold_001.tga
+  
+- MISC:
+  - NAME: Gold_010
+  - MODL: m\Gold_010.NIF
+  - FNAM: Золото
+  - MCDT:
+      weight: 0.1
+      value: 10
+      is_key: false
+  - ITEX: m\Tx_Gold_001.tga
+  
+- MISC:
+  - NAME: Gold_025
+  - MODL: m\Gold_025.NIF
+  - FNAM: Золото
+  - MCDT:
+      weight: 0.25
+      value: 25
+      is_key: false
+  - ITEX: m\Tx_Gold_001.tga
+  
+- MISC:
+  - NAME: Gold_100
+  - MODL: m\Gold_100.NIF
+  - FNAM: Золото
+  - MCDT:
+      weight: 1.0
+      value: 100
+      is_key: false
+  - ITEX: m\Tx_Gold_001.tga
+  
+- MISC:
+  - NAME: Gold_Dae_cursed_001
+  - MODL: m\Gold_001.NIF
+  - FNAM: Золото
+  - MCDT:
+      weight: 0.01
+      value: 1
+      is_key: false
+  - SCRI: BILL_MarksDaedraSummon
+  - ITEX: m\Tx_Gold_001.tga
+  
+- MISC:
+  - NAME: Gold_Dae_cursed_005
+  - MODL: m\Gold_005.NIF
+  - FNAM: Золото
+  - MCDT:
+      weight: 0.05
+      value: 5
+      is_key: false
+  - SCRI: BILL_MarksDaedraSummon
+  - ITEX: m\Tx_Gold_001.tga
+  
