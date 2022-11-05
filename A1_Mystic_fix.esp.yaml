@@ -2,10 +2,10 @@
   - HEDR:
       version: 1067869798
       type: ESP
-      author: ''
+      author: A1 Triard
       description:
-      - ''
-      records: 13
+      - Перебалансирует заклинания школы Мистицизма в сторону меньшей практичности.
+      records: 14
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
