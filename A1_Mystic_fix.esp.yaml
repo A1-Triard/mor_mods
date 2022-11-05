@@ -1,0 +1,278 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: ''
+      description:
+      - ''
+      records: 13
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- MGEF:
+  - INDX: Telekinesis
+  - MEDT:
+      school: Mysticism
+      base_cost: 10.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#FFDDF4'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_telekinesis.tga
+  - PTEX: vfx_particle064.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Этот эффект позволяет персонажу поднимать предметы или открывать контейнеры, находясь на значительной дистанции. Мощность заклинания непосредственно оказывает влияние на расстояние, с которого субъект может оперировать.
+  
+- MGEF:
+  - INDX: Recall
+  - MEDT:
+      school: Mysticism
+      base_cost: 3500.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#FAE6FF'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_Recall.tga
+  - PTEX: vfx_particle064.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Субъект данного заклинания немедленно перемещается в пространстве на то место, на котором был задействован эффект Пометки.
+  
+- MGEF:
+  - INDX: DivineIntervention
+  - MEDT:
+      school: Mysticism
+      base_cost: 3000.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#D5EAF9'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_Divine_Intervt.tga
+  - PTEX: vfx_particle064.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: "Субъект этого заклинания мгновенно переносится к ближайшему алтарю Имперского Культа.\r\n"
+  
+- MGEF:
+  - INDX: AlmsiviIntervention
+  - MEDT:
+      school: Mysticism
+      base_cost: 3000.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#D5EAF9'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_Alm_Intervt.tga
+  - PTEX: vfx_particle064.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Субъект этого эффекта непосредственно после чтения перемещается к алтарю ближайшего храма или часовни, исповедующего культ Трибунала.
+  
+- MGEF:
+  - INDX: SpellAbsorption
+  - MEDT:
+      school: Mysticism
+      base_cost: 100.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#FFF9FF'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_spll_absb.tga
+  - PTEX: vfx_purple.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Этот эффект позволяет читающему его поглощать силу атакующих заклинаний и пополнять за их счет свои запасы магической энергии. Мощность заклинания непосредственно влияет на процентный шанс поглощения атакующего заклинания. Если эффект успешен, то заклинатель прибавит очки магической энергии атакующего заклинания к своим собственным. (Запас магической энергии заклинателя не может увеличиться более максимального для него предела).  Если попытка поглощения безуспешна, атакующее заклинание оказывает нормальное воздействие.
+  
+- MGEF:
+  - INDX: AbsorbAttribute
+  - MEDT:
+      school: Mysticism
+      base_cost: 20.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#FFDFFF'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_Ab_Attrib.tga
+  - PTEX: vfx_myst_flare01.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Этот эффект временно переносит часть показателя характеристики на заклинателя. Только Сила, Интеллект, Воля, Ловкость, Скорость, Выносливость, Привлекательность и Удача могут быть изменены этим эффектом. Заклинатель может превысить свои максимальные значения характеристик на время действия заклинания. Когда эффект заканчивает свое действие, и заклинатель и жертва возвращаются к исходным значениям характеристик.
+  
+- MGEF:
+  - INDX: AbsorbHealth
+  - MEDT:
+      school: Mysticism
+      base_cost: 40.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#FFDFFF'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_Ab_Health.tga
+  - PTEX: vfx_myst_flare01.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Этот эффект временно переносит часть здоровья с жертвы на заклинателя, ухудшая здоровье жертвы и улучшая здоровье заклинателя. Значение здоровья заклинателя может превысить максимум на время действия эффекта. Когда эффект заканчивает свое действие, заклинатель теряет поглощенное здоровье, а жертва приобретает его.
+  
+- MGEF:
+  - INDX: AbsorbSpellPoints
+  - MEDT:
+      school: Mysticism
+      base_cost: 80.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#FFDFFF'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_Ab_Magic.tga
+  - PTEX: vfx_myst_flare01.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Этот эффект временно переносит часть магической энергии от жертвы к заклинателю, уменьшая запас Магической энергии у жертвы и пополняя его у заклинателя. Заклинатель может превысить свое нормальное значение этой характеристики на время действия заклинания. Когда эффект заканчивает свое действие, заклинатель теряет поглощенную магию, а жертва возвращает ее.
+  
+- MGEF:
+  - INDX: AbsorbFatigue
+  - MEDT:
+      school: Mysticism
+      base_cost: 40.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#FFDFFF'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_Ab_Fati.tga
+  - PTEX: vfx_myst_flare01.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Этот эффект временно отнимает часть запаса сил у жертвы и добавляет его заклинателю. Заклинатель может превысить свое нормальное значение этой характеристики на время действия заклинания. Когда эффект заканчивает свое действие, заклинатель теряет поглощенные силы, а жертва возвращает их.
+  
+- MGEF:
+  - INDX: AbsorbSkill
+  - MEDT:
+      school: Mysticism
+      base_cost: 20.0
+      flags: SPELLMAKING ENCHANTING
+      color: '#FFDFFF'
+      size_factor: 1.0
+      speed: 1.0
+      size_cap: 50.0
+  - ITEX: s\Tx_S_Ab_Skill.tga
+  - PTEX: vfx_myst_flare01.tga
+  - CVFX: VFX_MysticismCast
+  - BVFX: VFX_MysticismBolt
+  - HVFX: VFX_MysticismHit
+  - AVFX: VFX_MysticismArea
+  - DESC: Этот эффект временно отнимает у жертвы некоторое умение, и увеличивает умение заклинателя. Когда эффект заканчивает свое действие, заклинатель теряет приобретенный навык, а жертва возвращает его себе.
+  
+- SCPT:
+  - SCHD:
+      name: CountWizardSpells
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 0
+      data_size: 409
+      var_table_size: 20
+  - SCVR:
+    - hasLevitate
+    - hasFire
+  - SCDT: eJyNzt8KgjAUBvCONc2oUIigCNoj6AN4FfQCXdRdLFwizT+crcKePtcUiihkF+Mcft/hIyChZ9GAgLT0Pwa7FKziaAPM6GHt02Io+C1VTHEaRTQkJhC68E4Xhk7uqYhpB780fpogZ6pLYG4Co3OKnEpVYNZi6xu3xTU+MSH+0LbItqFHwTDhvwOOZwKDjOHlxWwgLq0rNwPUg9VrDiBhWBW57Os7DsDnJnBBv5Xnb4prrvbpg2G8K7kQEuAJJY1W+Q==
+  - SCTX:
+    - Begin CountWizardSpells
+    - ''
+    - ;runs ONCE from Aryon's Greeting
+    - short hasLevitate
+    - short hasFire
+    - ''
+    - Set hasLevitate to 0
+    - Set hasFire to 0
+    - ''
+    - if ( Player->GetSpell "levitate" == 1 )
+    - "\tSet hasLevitate to 1"
+    - endif
+    - ''
+    - if ( Player->GetSpell "wild levitate" == 1 )
+    - "\tSet hasLevitate to 1"
+    - endif
+    - ''
+    - if ( Player->GetSpell "great levitate" == 1 )
+    - "\tSet hasLevitate to 1"
+    - endif
+    - ''
+    - if ( Player->GetSpell "fire storm" == 1 )
+    - "\tSet hasFire to 1"
+    - endif
+    - ''
+    - if ( Player->GetSpell "fireball" == 1 )
+    - "\tSet hasFire to 1"
+    - endif
+    - ''
+    - if ( Player->GetSpell "Fireball_large" == 1 )
+    - "\tSet hasFire to 1"
+    - endif
+    - ''
+    - if ( Player->GetSpell "mark" == 1 )
+    - "\tif ( hasLevitate == 1 )"
+    - "\t\tif ( hasFire == 1 )"
+    - "\t\t\tset Aryon.learnedWizardSpells to 1"
+    - "\t\telse"
+    - "\t\t\tset Aryon.learnedWizardSpells to 0"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - ''
+    - StopScript CountWizardSpells
+    - ''
+    - End
+  
+- DIAL:
+  - NAME: заклинания волшебника
+  - DATA: Topic
+  
+- INFO:
+  - INAM: '3088429521932618889'
+  - PNAM: '24187163892101531244'
+  - NNAM: ''
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - ONAM: aryon
+  - NAME: Изучите элементарное заклинание Пометки, заклинание полета и заклинание, наносящее огненный урон. Я приму стандартные заклинания Левитации, Великой Левитации или Дикой Левитации. Что касается огненного урона, то я советую Огненный Шар, Большой Огненный Шар или Огненный Шторм. Самодельные заклинания не годятся.
+  - SCVR: 34JX3HT_MineCure
+  - INTV: 100
+  - BNAM:
+    - Journal HT_WizardSpells 10
+  
