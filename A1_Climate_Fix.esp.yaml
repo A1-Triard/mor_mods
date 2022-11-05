@@ -1,0 +1,139 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: ''
+      description:
+      - ''
+      records: 1
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- SCPT:
+  - SCHD:
+      name: _MS_AshEffects
+      vars:
+        shorts: 1
+        longs: 0
+        floats: 1
+      data_size: 1866
+      var_table_size: 12
+  - SCVR:
+    - state
+    - timer
+  - SCDT: eJydlMtu00AUhjOFhjhtUxtQSiG0h9sKIjkRFyERJCRQKkFZABLZjSb2xGOwZyKPkwArnoEdS54EeCMegXEmcd2osdMoUiTb33/O/8/llBEyoAcmdDrQuosMtIkGqFQF9Qe9yybcL6OLCvhlwq0OPC6jjfThScOs4eP3+IVkrwYD6sQykRtIM1vWtOKZTBmhyrTBs6TlJXQ87bkB9jYqDwPylUYPrVKp9EdxFnSNd4S7ImzZNjyHp49OMf/+Gih9oRpXoffDVGWbbXvD3DmiJIgZvCQh8WiKtZXu++8kqJw2VV3q0K2NOf5ISeRz743vsKn5GdFOpRWE9qH30wKx0xechiJwMaNBmKVbWfqOpvdS2iOs+WkUEI4Zc8lSHWjdVZeO/QCUkoITkT7kNrumRdshjXxJeD5c13BVxiIK89EbGt11VQSeMbOMv6752pgGImZ+kjWv/G2N19M1GogRd2kk8UoBvIDIAvRQo1ci6opI2QmJjGmEVwodKoWHY8G9c6YgUTjizaLw841OZQ4bfaP++qdqlWYO82Of4wmJHRYWiRpaZM5Eau0+5wvuacE+p6o8DiiJmVrsvvADWnBb9rRyS7fKP5TzQ+ar2RCpO5LANC6OToeMBGIotBV89OHt61MixR5Aty79LwxrdayOjByoW0LdZOzZczKZY5sGqIekgJ0ZQxfUBh1aD9RpwKHEk9kKEMkwF/NQJ/xNawmWEgfW7gKR+WRmP0kuJgaqZHy1sr4aM1+L5RYN5bQr9nqmoUpqqJ2d13mGWmvnz3Y411asGS/5IfQf0SrqPw==
+  - SCTX:
+    - begin _MS_AshEffects
+    - ''
+    - float timer
+    - short state
+    - ''
+    - if ( menumode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - set timer to timer + GetSecondsPassed
+    - ''
+    - if ( GetCurrentWeather != 6 )
+    - "\tif ( GetCurrentWeather != 7 )"
+    - "\t\tStopScript \"_MS_AshEffects\""
+    - "\t\treturn"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( GetInterior == 1 )
+    - "\tStopScript \"_MS_AshEffects\""
+    - "\treturn"
+    - endif
+    - ''
+    - if ( timer < 1 )
+    - "\treturn"
+    - else
+    - "\tset timer to 0"
+    - "\tPlayer->ModCurrentFatigue -2"
+    - "\tif ( Random100 > 95 )"
+    - "\t\tPlayer->ModCurrentFatigue -30"
+    - "\tendif"
+    - "\tif ( Player->GetFatigue < -20 )"
+    - "\t\tPlaySound \"Health Damage\""
+    - "\t\tPlayer->ModCurrentHealth -1"
+    - "\tendif"
+    - "\tset state to 0"
+    - "\tif ( vn_WearingLich == 1 )"
+    - "\t\tset state to 2"
+    - "\telseif ( Player->HasItemEquipped \"bonemold_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"bonemold_gah-julan_hhda\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"devil mole crab helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"merisan helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"storm helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"demon mole crab\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"velothian_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"bonemold_founders_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"glass_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"redoran_master_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"morag_tong_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"bonemold_armun-an_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"bonemold_chuzei_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"bonemold_gah-julan_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"chitin_watchman_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"chitin_mask_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"netch_leather_boiled_helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"chitin helm\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"indoril helmet\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( Player->HasItemEquipped \"cephalopod_helm_HTNK\" == 1 )"
+    - "\t\tset state to 1"
+    - "\telseif ( \"sixh_playertransformed\" != 0 )"
+    - "\t\tset state to 1"
+    - "\tendif"
+    - "\t"
+    - "\tif ( state == 0 )"
+    - "\t\tif ( player->getspell, \"_ms_weather_ash_nohelm\" == 0 )"
+    - "\t\t\tplayer->addspell, \"_ms_weather_ash_nohelm\""
+    - "\t\t\tplayer->removespell, \"_ms_weather_ash\""
+    - "\t\t\tplayer->removespell, \"_ms_weather_snow\"\t"
+    - "\t\tendif"
+    - "\telseif ( state == 1 ) "
+    - "\t\tif ( player->getspell, \"_ms_weather_ash\" == 0 )"
+    - "\t\t\tplayer->addspell, \"_ms_weather_ash\""
+    - "\t\t\tplayer->removespell, \"_ms_weather_ash_nohelm\""
+    - "\t\t\tplayer->removespell, \"_ms_weather_snow\""
+    - "\t\tendif"
+    - "\telseif ( state == 2 )"
+    - "\t\tif ( player->getspell, \"_ms_weather_ash\" == 1 )"
+    - "\t\t\tplayer->removespell, \"_ms_weather_ash\""
+    - "\t\t\tplayer->removespell, \"_ms_weather_snow\""
+    - "\t\tendif"
+    - "\t\tif ( player->getspell, \"_ms_weather_ash_nohelm\" == 0 )"
+    - "\t\t\tplayer->removespell, \"_ms_weather_ash_nohelm\""
+    - "\t\t\tplayer->removespell, \"_ms_weather_snow\""
+    - "\t\tendif"
+    - "\tendif"
+    - ''
+    - "\t"
+    - endif
+    - ''
+    - end
+  

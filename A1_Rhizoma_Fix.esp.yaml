@@ -1,0 +1,73 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: ''
+      description:
+      - ''
+      records: 1
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- SCPT:
+  - SCHD:
+      name: Ramoram-toAld-ruhn
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 0
+      data_size: 300
+      var_table_size: 19
+  - SCVR:
+    - DoOnce
+    - nolore
+    - stop
+  - SCDT: eJxVkLFKA0EYhO9PzJIVxA1cpYJ/YalhzyBY5CwsUluFKw6WX0xQuOPkvwPJO/gmvkp8Ai2SLlVC6hTJ7i0JpJ1hhm9GAEgsmwHGMUY3IEFAQ2LyrbAfo56qkIgMU27GVFFmRswFl6fBdtsCm2pg5BJtWwF1hRYgQkxA3SKLl4wmI8Y+PkT3Ak6unI58bgsryj+YTFlU7+T9y044LNLXdJwOsi/zPNC6180/e+1gvZqtF/Nld6rO9ihlVfDkzjIslKUATyFrdjsm2ah6TAuGztJObl5g8qvw7bgCn2J81D507UN/Sh4++PfSTwcCdwzADjWkSD8=
+  - SCTX:
+    - begin Ramoram-toAld-ruhn
+    - ''
+    - Short DoOnce
+    - short nolore
+    - ''
+    - short stop
+    - ''
+    - if ( stop == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( gethealth <= 0 )
+    - "\tjournal \"aaa_ram_fatal_errors\" 10 "
+    - "\tset stop to 1"
+    - 'endif '
+    - ''
+    - if ( DoOnce == 0 )
+    - if ( GetDistance, Player < 512 )
+    - if ( GetDistance "aa_tamira_sotha" < 512 )
+    - "\tSay \"Vo\\b\\f\\Flw_BF003.mp3\" \"спасибо.\""
+    - "\tJournal \"aaa_ram_story\" 45"
+    - "\t\tForceGreeting"
+    - "\t\t\tset DoOnce to 1 "
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - if ( GetAIPackageDone == 1)
+    - "\tset state to 0"
+    - endif
+    - ''
+    - "\tif (GetJournalIndex \"aaa_ram_story\" >= 80)"
+    - "\tif ( CellChanged == 1 )"
+    - "\t\tDisable"
+    - "\tendif"
+    - endif
+    - if ( GetDisabled == 1 )
+    - "\tsetdelete 1"
+    - "\treturn"
+    - "endIf\t"
+    - ''
+    - End Ramoram-toAld-ruhn
+    - ''
+  
