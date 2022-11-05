@@ -1,0 +1,73 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: A1
+      description:
+      - При переходе в скрытный режим удача увеличивается до 90. Таким образом, нанести кретический удар становится реально. Также увеличен коэффициент в 10 раз.
+      - Требует начала новой игры
+      records: 3
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- GMST:
+  - NAME: fCombatCriticalStrikeMult
+  - FLTV: 40.0
+  
+- SCPT:
+  - SCHD:
+      name: A1_Sneak
+      vars:
+        shorts: 1
+        longs: 1
+        floats: 1
+      data_size: 207
+      var_table_size: 19
+  - SCVR:
+    - luckMod
+    - luck
+    - timer
+  - SCDT: eJxljr0KwkAQhG8it7JicfEJprBSAnvYqBB9jWsttEohWtlZ+9RuNATBZn/Yb2ZHAGVhYtsyL6GIuCDM6IVlkbgWRAdedQ+YYKK8+6mnI3yqaBEdgrLJ9M7VHHLtTo/zbZ98D4op4q/OBl0ewcFgZyzbxObPQCGovpEO/tdGYFOH8Dx+EnsOBfAGec8eBQ==
+  - SCTX:
+    - begin A1_Sneak
+    - ''
+    - long luck
+    - short luckMod
+    - float timer
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - set timer to ( timer + GetSecondsPassed )
+    - ''
+    - if ( GetPCSneaking == 0 )
+    - "\tif ( luckMod == 1 )"
+    - "\t\tset luckMod to 0"
+    - "\t\tset luck to -luck"
+    - "\t\tPlayer->ModLuck luck"
+    - "\tendif"
+    - else
+    - "\tif ( luckMod == 0 )"
+    - "\t\tset luckMod to 1"
+    - "\t\tset luck to 90 - ( Player->GetLuck )"
+    - "\t\tPlayer->ModLuck luck"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( timer >= 10 )
+    - "\tplayer->ModCurrentMagicka 1"
+    - "\tset timer to 0"
+    - endif
+    - ''
+    - end
+    - ''
+  
+- SSCR:
+  - DATA: '204221753077134255'
+  - NAME: A1_Sneak
+  
