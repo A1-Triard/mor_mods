@@ -1,0 +1,159 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: ''
+      description:
+      - ''
+      records: 4
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- SCPT:
+  - SCHD:
+      name: DL_ResLock20
+      vars:
+        shorts: 1
+        longs: 0
+        floats: 0
+      data_size: 167
+      var_table_size: 5
+  - SCVR:
+    - Done
+  - SCDT: eJyFjUEKgCAURB1TyVUKHeAfQTdFkG3tGi1aRlB0/xQiqk3LgXnvKQhLsYzTMo/rsdEQyHcKXNMORiGQa2zNJNLi5DU0FET1JHpqf/7SfAoJKMzbkaO4Jf4SuCzQAE71hBpN
+  - SCTX:
+    - Begin DL_ResLock20
+    - short Done
+    - if( GameHour >= 19)
+    - "\tif( Done == 0)"
+    - "\t\tLock 20"
+    - "\t\tset Done to 1"
+    - "\tendif"
+    - endif
+    - if( GameHour < 7)
+    - "\tif( Done == 0)"
+    - "\t\tLock 20"
+    - "\t\tset Done to 1"
+    - "\tendif"
+    - endif
+    - if( GameHour >= 7)
+    - "\tif( GameHour < 19 )"
+    - "\t\tif( Done == 1)"
+    - "\t\t\tset Done to 0"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - End
+  
+- SCPT:
+  - SCHD:
+      name: DL_ResLock30
+      vars:
+        shorts: 1
+        longs: 0
+        floats: 0
+      data_size: 167
+      var_table_size: 5
+  - SCVR:
+    - Done
+  - SCDT: eJyFjUEKgCAURB1TyVV6gfhH0E0RZFu7RouWERTdP4WIatNyYN57CsJSLOO0zON6bDQE8p0C17SDUQjkGlszibQ4eQ0NBVE9iZ7an780n0ICCvN25Chuib8ELgs0gBP94Bph
+  - SCTX:
+    - Begin DL_ResLock30
+    - short Done
+    - if( GameHour >= 19)
+    - "\tif( Done == 0)"
+    - "\t\tLock 30"
+    - "\t\tset Done to 1"
+    - "\tendif"
+    - endif
+    - if( GameHour < 7)
+    - "\tif( Done == 0)"
+    - "\t\tLock 30"
+    - "\t\tset Done to 1"
+    - "\tendif"
+    - endif
+    - if( GameHour >= 7)
+    - "\tif( GameHour < 19 )"
+    - "\t\tif( Done == 1)"
+    - "\t\t\tset Done to 0"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - End
+  
+- SCPT:
+  - SCHD:
+      name: DL_ResLock50
+      vars:
+        shorts: 1
+        longs: 0
+        floats: 0
+      data_size: 167
+      var_table_size: 5
+  - SCVR:
+    - Done
+  - SCDT: eJyFjUEKgCAURB1TyVV6g38EbVEE2dau0aJlBEX3TyGi2rQcmPeegrAUyzgt87geGw2BfKfANe1gFAK5xtZMIi1OXkNDQVRPoqf25y/Np5CAwrwdOYpb4i+BywIN4AQOpxqJ
+  - SCTX:
+    - Begin DL_ResLock50
+    - short Done
+    - if( GameHour >= 19)
+    - "\tif( Done == 0)"
+    - "\t\tLock 50"
+    - "\t\tset Done to 1"
+    - "\tendif"
+    - endif
+    - if( GameHour < 7)
+    - "\tif( Done == 0)"
+    - "\t\tLock 50"
+    - "\t\tset Done to 1"
+    - "\tendif"
+    - endif
+    - if( GameHour >= 7)
+    - "\tif( GameHour < 19 )"
+    - "\t\tif( Done == 1)"
+    - "\t\t\tset Done to 0"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - End
+  
+- SCPT:
+  - SCHD:
+      name: DL_ResLock60
+      vars:
+        shorts: 1
+        longs: 0
+        floats: 0
+      data_size: 167
+      var_table_size: 5
+  - SCVR:
+    - Done
+  - SCDT: eJyFjUEKgCAURB1TyVV6g38E3RSBtrVrtGgZQdH9U4ioNi0H5r2nICylOk3LPK7HRkMk3ytwTTsYxUiutYFJ5MXJa2goiOZJBOp+/tJ8ChmozNtRorgl/hK4ItAAThcDGp0=
+  - SCTX:
+    - Begin DL_ResLock60
+    - short Done
+    - if( GameHour >= 19)
+    - "\tif( Done == 0)"
+    - "\t\tLock 60"
+    - "\t\tset Done to 1"
+    - "\tendif"
+    - endif
+    - if( GameHour < 7)
+    - "\tif( Done == 0)"
+    - "\t\tLock 60"
+    - "\t\tset Done to 1"
+    - "\tendif"
+    - endif
+    - if( GameHour >= 7)
+    - "\tif( GameHour < 19 )"
+    - "\t\tif( Done == 1)"
+    - "\t\t\tset Done to 0"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - End
+  
