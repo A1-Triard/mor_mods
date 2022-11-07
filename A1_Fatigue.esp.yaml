@@ -1,0 +1,36 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: ''
+      description:
+      - ''
+      records: 2
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- SCPT:
+  - SCHD:
+      name: A1_Fatigue
+      vars:
+        shorts: 0
+        longs: 0
+        floats: 0
+      data_size: 17
+      var_table_size: 0
+  - SCDT: eJzjYWQryEmsTC0yEcwXat7FyAgAJ94Epg==
+  - SCTX:
+    - Begin A1_Fatigue
+    - ''
+    - player->ModCurrentFatigue -0.001
+    - ''
+    - End
+  
+- SSCR:
+  - DATA: '1769025121873217191'
+  - NAME: A1_Fatigue
+  
