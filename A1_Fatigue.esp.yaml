@@ -2,16 +2,16 @@
   - HEDR:
       version: 1067869798
       type: ESP
-      author: ''
+      author: A1
       description:
-      - ''
-      records: 2
+      - Запрещает бесконечный бег, заставляя падать игрока, исчерпавшего усталость и пытающегося бежать.
+      records: 3
   - MAST: Morrowind.esm
-  - DATA: 79764287
+  - DATA: 79765994
   - MAST: Tribunal.esm
-  - DATA: 6616539
+  - DATA: 6618333
   - MAST: Bloodmoon.esm
-  - DATA: 11799703
+  - DATA: 11801192
   
 - SCPT:
   - SCHD:
