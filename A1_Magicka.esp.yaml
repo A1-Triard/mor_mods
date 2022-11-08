@@ -5,7 +5,7 @@
       author: A1
       description:
       - Восстановление магии, выдранное из сборника модов MFR.
-      records: 10
+      records: 8
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -33,11 +33,6 @@
   - FNAM: s
   - FLTV: 1.0
   
-- GLOB:
-  - NAME: al_mpregen_check
-  - FNAM: s
-  - FLTV: 0.0
-  
 - SCPT:
   - SCHD:
       name: al_1MagickaRegCheck
@@ -45,13 +40,13 @@
         shorts: 1
         longs: 0
         floats: 2
-      data_size: 1044
+      data_size: 817
       var_table_size: 46
   - SCVR:
     - DoOnce
     - PCRaceMultiplier
     - PCBirthsignMultiplier
-  - SCDT: eJy1U11L22AUzqlraphs2aabMLcdRy82lJAIuewuJkPYEMZ207vwpn3rgvkoacPoft1+gj8htEaLNtFWxAs/8E2MNdWIV5KbQ57znOc5T054gCJWUeTKMA0wj2siMTWr6dINamu1P7S2iZUKymUQgIcZAVvAJS+KsDb74+fqOtkwaptk3TPbRtM0qFu4Df2ibc+1v5IWLaEsyStqLh4PSHBZifHXWZw5+WYT3aT1AiozwDdN0qEuDzCH1cUXy+hM/3UsXWdTYmcKJ37ntqKd7SAMTwM8iLZxN/T3ogH+Hx1GoX/sYxjgIOodjbAbDYcjP/S7+/2uPzrDgd/rnwTDvaMLPA+Dw17/QuK4sSLL50Oq+HKs+Ok3rXl2nXx+FO0SACdOcZLEagGKwNJnGcRVI67kbBpjb3XPtqir6S6x6xr557kk8ZZwnrCM1exGiylr1rqKGy32JVB3bK+lqTe8bPKM9TFlzeWwFDUrp0hqYrdw2+58OuJpg3SQ6IZptDvXxMJdnwtp+3NqNnSHBZ9DUSYp+eeR9q5Icuwr/4ifoYLMPS4h68UlHoTcH+NLZeIeS7mC2aWLD9yPzMPUe7zv+hP7LLkyVt+Jy2i9YYaUbB91SdtwrlTfivfBAlw/C+KryZ7VeC2AS9QwVfI=
+  - SCDT: eJx9kl1LwmAUx3csV1bUolfohVN0V4xN8NKbJIJCiK68k2f2aMPpxBfCb9dH6CMMdSXmli9EF5X0TBdOm7GbA//z/5/fOXt4gCAmUOBOIAQ8LIWwBBxGoygF4XLz+iYWJxk1lSXxilZWC5pKi4Fp6ZaWK8X8OSnRBZREKRzx1Z2AoS7Jjr7t1TM0f5EnikbvAiivAF/QSJUWeYAtTBytn6G++KDnFIWlOGQyJ1xxT/Zzw7SsTxPf7Aa+WEbLbuNjr2NbxruBloltu97vYc3udnuGZdRemzWj94Vto978MLut/gC/LbNTbw5EjlsA4IQ5ThRZHYIgsAswDqdKO5XkJTp2ibZyI3jMsb1Q0fOVUlKWhniubbzIIsCRa9v0sUXGrnl2oIjX9++4CaMsRobEgWniXTdiOU2qSBRVU8vVX2Pg78R9t32NamlFZxf3sciTFv+/5PaGRcnh8n9Lqygjo8dTZL146sEO+oZKPMwd4qzHMxzLNj7BxIFwhrkdoiVlbx8tkrKqj5L2hFlyCJxvX9iY1GP3NJUF+AGl4fFR
   - SCTX:
     - Begin al_1MagickaRegCheck
     - ''
@@ -63,8 +58,8 @@
     - ''
     - if ( menumode )
     - "\treturn"
-    - elseif ( al_mpregen_check == 0 )
-    - "\treturn"
+    - ;elseif ( al_mpregen_check == 0 )
+    - ";\treturn"
     - endif
     - ''
     - ;просто тест видео через новую игру
@@ -78,8 +73,8 @@
     - "\tset KPCMagickaRegenEnabled to 1"
     - "\tif ( Player -> GetSpellEffects, \"wombburn\" == 1 )"
     - "\t\tMessageBox \"Рожденные под знаком Атронаха не могут восстанавливать магическую энергию.\""
-    - "\telseif ( Player -> GetSpellEffects, \"wombburn (Secunda)\" == 1 )"
-    - "\t\tMessageBox \"Рожденные под знаком Атронаха не могут восстанавливать магическую энергию.\""
+    - ";\telseif ( Player -> GetSpellEffects, \"wombburn (Secunda)\" == 1 )"
+    - ";\t\tMessageBox \"Рожденные под знаком Атронаха не могут восстанавливать магическую энергию.\""
     - "\telse"
     - "\t\tMessageBox \"...\""
     - "\tendif"
@@ -88,11 +83,11 @@
     - ''
     - ;RaceCheck
     - set PCRaceMultiplier to 0
-    - if ( Player -> GetSpellEffects, "dunmer_brand_azura" == 1 ) ; Dunmer ability
-    - "\tset PCRaceMultiplier to 0.5"
-    - elseif ( Player -> GetSpellEffects, "magicka mult bonus_5" == 1 ) ; Breton ability
+    - if ( Player -> GetSpellEffects, "magicka mult bonus_10" == 1 ) ;
     - "\tset PCRaceMultiplier to 1"
-    - elseif ( Player -> GetSpellEffects, "magicka mult bonus_15" == 1 ) ; Altmer ability
+    - elseif ( Player -> GetSpellEffects, "magicka mult bonus_5" == 1 ) ;
+    - "\tset PCRaceMultiplier to 0.5"
+    - elseif ( Player -> GetSpellEffects, "magicka mult bonus_15" == 1 ) ;
     - "\tset PCRaceMultiplier to 1.5"
     - endif
     - ;Birthsign Check
@@ -107,17 +102,17 @@
     - ''
     - set KPCMagickaMultiplier to ( 1 + PCRaceMultiplier + PCBirthsignMultiplier )
     - ''
-    - if ( al_mpregen_check >= 1 )
+    - ;if ( al_mpregen_check >= 1 )
     - "\tif ( Player -> GetSpellEffects, \"wombburn\" == 0 )"
-    - "\t\tif ( Player -> GetSpellEffects, \"wombburn (Secunda)\" == 0 )"
+    - ";\t\tif ( Player -> GetSpellEffects, \"wombburn (Secunda)\" == 0 )"
     - "\t\t\tif ( KPCMagickaRegenEnabled == 1 )"
     - "\t\t\t\tif ( ScriptRunning, al_1MagickaRegeneration == 0 )"
     - "\t\t\t\t\tStartScript \"al_1MagickaRegeneration\""
     - "\t\t\t\tendif"
     - "\t\t\tendif"
-    - "\t\tendif "
+    - ";\t\tendif "
     - "\tendif"
-    - endif
+    - ;endif
     - ''
     - StopScript al_1MagickaRegCheck
     - ''
@@ -217,12 +212,12 @@
         shorts: 2
         longs: 0
         floats: 0
-      data_size: 718
+      data_size: 667
       var_table_size: 16
   - SCVR:
     - Button
     - difftize
-  - SCDT: eJxtUT9PGzEctU8izWWy1IGhafWGTu01yn0A1KFCTFQVUzYURacUQdKKlo/Bl0KsjOyOg4XJ3ZmzIwhSIg5f4CKCbrOf/X7vz69GqY8OGLa2EH6mPq1Rz8c/jxRAm7BTcqmtjBVGc4h5gJnVxYk/cCR8rHIIbYzlKRexEjzmZgGjITKZyFQmELjmQhmVaGMVtC2Y8gYZN3MoGBW7WTpW33GGkX6sGmkXJkcqMZpeSdsi3tdzHuB2auwCic5fGJZP1lnSmrxFggtpAyzpd3o2Lb7psS5/ahHLVD2PUC2yQV1qD2FRweaqgtDBlGyg84mRGqUNuFuBf3Nl1anvl/e2xxqDaHiC3tFB75CwgJyrlCdqJs2E58jk2PWR8ftSD3xilVCZFs5yizj1HdY92h/8PY760XC/9zvqHXpL9cJUe+ninVNFiC/OB9D5yAIM3jtOuNvtO83uXtT/UdCWdj6wqiefNlnD4bu/9rZ3tn/WaX0VIHwToE3O5m5hE37NY+W26nZ3tUqkb14lUmWDlSFK05VJmpUum2xzHY2G0XH3/8Gf4Zp7n76JQ+kTIWBREA==
+  - SCDT: eJxtkb9r20Acxe8EcSxPB6V0qFve0KlVjdU9dCihU0rJ5K0YI9KQxIX++DP6T4WsHbufzznyjSVddWcaB2yinJzIxMGb7um+733ufRuch+hBYGcH8Sse8gYPQvwIWCV0mfjN/hqnU8JoDjWPMHOm+pLXEpkcUwllrHUylyolJVNpF7AGqtCZznUGhQupyFJmrCMYV03qSxTSzkGwlHovk9J7nGJkbjZZuoUtkWuMpufadVjw5kxG+De1boHMlPcTTk7Wp7SzZYdFf7SLsBz/b2bT6poZm/qmUanO6c6COmyL+1cHiKsKnq4qiL3M2RZ6LwVrcN6CP1X6W19WkzfD+twNROskGf7C4PhwcMRExM4olxnNtJ3IEoUe+z4KeVXnQU4cKSqM8sgdVqe/W8Zte3vEeO0Dgd4LEeHkSf/4S7zXP/Dm/f3k4MPXZHC0zH0uNv0KeVu0vL73eX/34+6nJt9ekcaPSLvsdO43M5EXMiW/Pr+k8xW6uXyATnVVm2nbG0na4tm6mgyT7/2fh9+Ga4Qhf4TM+S3MC0H1
   - SCTX:
     - begin al_MPREGEN
     - ''
@@ -245,8 +240,8 @@
     - "\telseif (button == 0 )"
     - "\t\tPlaySound, \"menu click\""
     - "\t\tMessageBox \"Динамическая регенерация магии активирована.\""
-    - "\t\tset al_mpregen_check to 1"
-    - "\t\tset difftize to 0"
+    - ";\t\tset al_mpregen_check to 1"
+    - "\t\tset difftize to 2"
     - "\t\tset button to -1"
     - "\t\tif ( ScriptRunning, al_1MagickaRegCheck == 0 )"
     - "\t\t\tstartscript \"al_1MagickaRegCheck\""
@@ -256,8 +251,8 @@
     - "\telseif (button == 1 )"
     - "\t\tPlaySound, \"menu click\""
     - "\t\tMessageBox \"Вы отказались от динамической регенерации магии.\""
-    - "\t\tset al_mpregen_check to -1"
-    - "\t\tset difftize to 0"
+    - ";\t\tset al_mpregen_check to -1"
+    - "\t\tset difftize to 2"
     - "\t\tset button to -1"
     - "\t\t;startscript \"al_TRAVGlobalScr\""
     - "\t\tstopscript \"al_1MagickaRegCheck\""
@@ -269,10 +264,6 @@
     - StopScript "al_MPREGEN"
     - ''
     - End
-  
-- SSCR:
-  - DATA: '193052334375744925'
-  - NAME: al_1MagickaRegCheck
   
 - SSCR:
   - DATA: '2931311741873110496'
