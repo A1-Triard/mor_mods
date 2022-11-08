@@ -1,0 +1,275 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: A1
+      description:
+      - Восстановление магии, выдранное из сборника модов MFR.
+      records: 37609
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- GLOB:
+  - NAME: KPCMagickaMultiplier
+  - FNAM: f
+  - FLTV: 0.0
+  
+- GLOB:
+  - NAME: KPCMagickaReturnBase
+  - FNAM: f
+  - FLTV: 0.75
+  
+- GLOB:
+  - NAME: KPCMagickaReturnMult
+  - FNAM: f
+  - FLTV: 0.02
+  
+- GLOB:
+  - NAME: KPCMagickaRegenEnabled
+  - FNAM: s
+  - FLTV: 1.0
+  
+- GLOB:
+  - NAME: al_mpregen_check
+  - FNAM: s
+  - FLTV: 0.0
+  
+- SCPT:
+  - SCHD:
+      name: al_1MagickaRegCheck
+      vars:
+        shorts: 1
+        longs: 0
+        floats: 2
+      data_size: 1044
+      var_table_size: 46
+  - SCVR:
+    - DoOnce
+    - PCRaceMultiplier
+    - PCBirthsignMultiplier
+  - SCDT: eJy1U11L22AUzqlraphs2aabMLcdRy82lJAIuewuJkPYEMZ207vwpn3rgvkoacPoft1+gj8htEaLNtFWxAs/8E2MNdWIV5KbQ57znOc5T054gCJWUeTKMA0wj2siMTWr6dINamu1P7S2iZUKymUQgIcZAVvAJS+KsDb74+fqOtkwaptk3TPbRtM0qFu4Df2ibc+1v5IWLaEsyStqLh4PSHBZifHXWZw5+WYT3aT1AiozwDdN0qEuDzCH1cUXy+hM/3UsXWdTYmcKJ37ntqKd7SAMTwM8iLZxN/T3ogH+Hx1GoX/sYxjgIOodjbAbDYcjP/S7+/2uPzrDgd/rnwTDvaMLPA+Dw17/QuK4sSLL50Oq+HKs+Ok3rXl2nXx+FO0SACdOcZLEagGKwNJnGcRVI67kbBpjb3XPtqir6S6x6xr557kk8ZZwnrCM1exGiylr1rqKGy32JVB3bK+lqTe8bPKM9TFlzeWwFDUrp0hqYrdw2+58OuJpg3SQ6IZptDvXxMJdnwtp+3NqNnSHBZ9DUSYp+eeR9q5Icuwr/4ifoYLMPS4h68UlHoTcH+NLZeIeS7mC2aWLD9yPzMPUe7zv+hP7LLkyVt+Jy2i9YYaUbB91SdtwrlTfivfBAlw/C+KryZ7VeC2AS9QwVfI=
+  - SCTX:
+    - Begin al_1MagickaRegCheck
+    - ''
+    - ;global script that gets run once to check the PC's magicka regeneration
+    - ''
+    - short DoOnce
+    - float PCRaceMultiplier
+    - float PCBirthsignMultiplier
+    - ''
+    - if ( menumode )
+    - "\treturn"
+    - elseif ( al_mpregen_check == 0 )
+    - "\treturn"
+    - endif
+    - ''
+    - ;просто тест видео через новую игру
+    - ;playbink "MFR_clanger1" 1
+    - ''
+    - if ( DoOnce == 0 )
+    - "\t; Restart default values"
+    - "\tset KPCMagickaMultiplier to 0"
+    - "\tset KPCMagickaReturnBase to 0.0250"
+    - "\tset KPCMagickaReturnMult to 0.0010"
+    - "\tset KPCMagickaRegenEnabled to 1"
+    - "\tif ( Player -> GetSpellEffects, \"wombburn\" == 1 )"
+    - "\t\tMessageBox \"Рожденные под знаком Атронаха не могут восстанавливать магическую энергию.\""
+    - "\telseif ( Player -> GetSpellEffects, \"wombburn (Secunda)\" == 1 )"
+    - "\t\tMessageBox \"Рожденные под знаком Атронаха не могут восстанавливать магическую энергию.\""
+    - "\telse"
+    - "\t\tMessageBox \"...\""
+    - "\tendif"
+    - "\tset DoOnce to 1"
+    - endif
+    - ''
+    - ;RaceCheck
+    - set PCRaceMultiplier to 0
+    - if ( Player -> GetSpellEffects, "dunmer_brand_azura" == 1 ) ; Dunmer ability
+    - "\tset PCRaceMultiplier to 0.5"
+    - elseif ( Player -> GetSpellEffects, "magicka mult bonus_5" == 1 ) ; Breton ability
+    - "\tset PCRaceMultiplier to 1"
+    - elseif ( Player -> GetSpellEffects, "magicka mult bonus_15" == 1 ) ; Altmer ability
+    - "\tset PCRaceMultiplier to 1.5"
+    - endif
+    - ;Birthsign Check
+    - set PCBirthsignMultiplier to 0
+    - if ( Player -> GetSpellEffects, "fay ability"  == 1 ) ; The Mage birthsign
+    - "\tset PCBirthsignMultiplier to 0.5\t"
+    - "elseif ( Player->GetSpellEffects, \"elfborn ability\"\t== 1 )   ; The Apprentice birthsign"
+    - "\tset PCBirthsignMultiplier to 1.5"
+    - 'elseif ( Player -> GetSpellEffects, "wombburn" == 1 ) '
+    - "\tset PCBirthsignMultiplier to 2.0 ; The Atronach birthsign"
+    - endif
+    - ''
+    - set KPCMagickaMultiplier to ( 1 + PCRaceMultiplier + PCBirthsignMultiplier )
+    - ''
+    - if ( al_mpregen_check >= 1 )
+    - "\tif ( Player -> GetSpellEffects, \"wombburn\" == 0 )"
+    - "\t\tif ( Player -> GetSpellEffects, \"wombburn (Secunda)\" == 0 )"
+    - "\t\t\tif ( KPCMagickaRegenEnabled == 1 )"
+    - "\t\t\t\tif ( ScriptRunning, al_1MagickaRegeneration == 0 )"
+    - "\t\t\t\t\tStartScript \"al_1MagickaRegeneration\""
+    - "\t\t\t\tendif"
+    - "\t\t\tendif"
+    - "\t\tendif "
+    - "\tendif"
+    - endif
+    - ''
+    - StopScript al_1MagickaRegCheck
+    - ''
+    - End
+  
+- SCPT:
+  - SCHD:
+      name: al_1MagickaRegeneration
+      vars:
+        shorts: 6
+        longs: 1
+        floats: 4
+      data_size: 610
+      var_table_size: 137
+  - SCVR:
+    - Update
+    - CheckInitTime
+    - CheckTimePassing
+    - InitGameHour
+    - InitDaysPassed
+    - CurGameHour
+    - Health
+    - TimePassed
+    - TotalMagicka
+    - MagickaRegenRate
+    - WaitedTime
+  - SCDT: eJx9UU1Lw0AQnUmabbcWScWLB2EORbBF3VgRD7YHFaJIoaiHXJe6kWCqJWkP/Qce/C36F52NtR9+HXaGmfd4M29WYFlSRD51OhQILEnKHbCF8jAvQY3CSqiH5vJ5kgF3PFinsHqhp3lf57m5tz0HHAo4uzZLbKDEGopRqqcmE4hVik7qL4U+k5BJag5XEHn6W/0/9P1P1Fmj6NWnU0oR4AfuIbc9y4Ay4gzm/QRW2KQLX6riu8m4BI0Vk8S2aY8Oj6hJTCe+C5ctgY4kJlO3EIoRtoqyfawUM0N5lwzN7UCnhg4W42eHUrPDKbsQ22S4uHoDyygLsSpxoGjDt5OELKpu8UnunB4suY0d2KZox6dw87p/3tMPyeBR9ybpOBmlicmoucx14YrUvgpWyDdmPMmeznRufmlbJYp2fXbW4sfTbOQ1FrrtOuuCtRjjpzWJiB/KmHD/
+  - SCTX:
+    - Begin al_1MagickaRegeneration
+    - ''
+    - Short Update
+    - float TimePassed
+    - float TotalMagicka
+    - float MagickaRegenRate
+    - short CheckInitTime
+    - short CheckTimePassing
+    - short InitGameHour
+    - short InitDaysPassed
+    - short CurGameHour
+    - float WaitedTime
+    - Long Health
+    - ''
+    - if ( MenuMode == 1)
+    - "\tif ( CheckInitTime == 0 )"
+    - "\t\tset InitGameHour to GameHour"
+    - "\t\tset InitDaysPassed to DaysPassed"
+    - "\t\tset CheckInitTime to 1"
+    - "\t\tset CheckTimePassing to 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( player->geteffect, sEffectStuntedMagicka == 1 )
+    - "\tset Update to 0"
+    - elseif ( player->GetWeaponDrawn == 1 )
+    - "\tset Update to 0"
+    - elseif ( player->GetSpellReadied == 1 )
+    - "\tset Update to 0"
+    - elseif ( player->GetHealth < Health )
+    - "\tset Update to 0"
+    - "\tSet Health to ( Player->GetHealth )"
+    - else
+    - "\tset Update to 1"
+    - Endif
+    - ''
+    - "\tif ( CheckTimePassing == 1 )"
+    - "\t\tset CurGameHour to GameHour"
+    - "\t\tset WaitedTime to ( ( DaysPassed - InitDaysPassed ) * 24 ) + ( CurGameHour - InitGameHour )"
+    - "\t\tif ( WaitedTime >= 1 )"
+    - "\t\t\tset TimePassed to ( ( WaitedTime * 3600 ) / TimeScale )"
+    - "\t\t\tset Update to 1\t\t"
+    - "\t\tendif"
+    - "\t\tset CheckTimePassing to 0"
+    - "\t\tset CheckInitTime to 0"
+    - "\tendif"
+    - ''
+    - if ( Update == 0 )
+    - "\treturn"
+    - else
+    - "\tset TimePassed to ( TimePassed + GetSecondsPassed )"
+    - "\tif ( TimePassed >= 1 )"
+    - "\t\tif ( Update == 1 )"
+    - "\t\t\tset TotalMagicka to ( ( Player -> GetIntelligence ) * KPCMagickaMultiplier )"
+    - "\t  \t\tset MagickaRegenRate to 0.01 * ( KPCMagickaReturnBase + ( KPCMagickaReturnMult * ( Player -> GetWillpower ) ) ) * TotalMagicka * TimePassed"
+    - "\t\t\tPlayer -> ModCurrentMagicka, MagickaRegenRate"
+    - "\t\tendif"
+    - "\t\tset TimePassed to 0"
+    - "\tendif"
+    - endif
+    - ''
+    - End
+
+- SCPT:
+  - SCHD:
+      name: al_MPREGEN
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 0
+      data_size: 756
+      var_table_size: 16
+  - SCVR:
+    - Button
+    - difftize
+  - SCDT: eJxtUk1v0zAYtiOtLD1Z4oDQBnoPnCBUzQ+YEEJTT0OoINTbFKKoTGs7VOBn8KemXTlyd91Z85rExK6gSK0Ir8tSrVNu8RM/7/PxukGpDz1gcHAA4RPq0wb1fPjsEQe0CftGfmgrUwWTJYhlAAur3Rf/wyHjU1WC0MZYnnORKsFTblZgNIhCZjKXGQi44kIZlWljFWjrmPIaCm6WoMCoFGfpVL2Ac5jov3Uj7cqUkEuYzC+lbRHv2QUP4Ofc2BVkurxhWD7bZklryhYJvksbwJr+Sy/m7pqe6uqmFqnM1f8RqkV2KKb2IHQVPNxUECJMyQ70HjPSoLQJeHL4cyxrlzb96tz2WHOYjL5CPDiJTwkLyIXKeaYW0sx4CYWcYh8F/13pAZ9ZJVShBVpuEVTvsGhwPPw0TvrJ6Dj+mMSn3lrdmWqvXdxDVQjhKfoA6D1iAQzvIyc8ivqoGXWT/itHW9vZY3W/fLrHnMy77sv3ncHZh2jwNh7vsyZCR2+6h53D17vU32QK72Rqk/Ml7nDGr3iqcNG4zstNSH19K6SqSq3NVeWoDVdrsC7LPnuwjSajZBx9OTkbbQXy8U1vAZT+A2/JXU4=
+  - SCTX:
+    - begin al_MPREGEN
+    - ''
+    - short Button
+    - short difftize
+    - ''
+    - If ( MenuMode == 1 )
+    - "\tReturn"
+    - Endif
+    - ''
+    - if ( difftize == 0 )
+    - "\tmessagebox \"Хотели бы вы, чтобы ваша магия восстанавливалась со временем в зависимости от вашей расы и силы воли? В бою магия восстанавливаться не будет.\", \"Да, пусть моя магия так восстанавливается.\", \"Нет, я не хочу такого восстановления магии.\""
+    - "\tset difftize to 1"
+    - Endif
+    - ''
+    - if ( difftize == 1 )
+    - "\tSet button to GetButtonPressed"
+    - "\tif ( button == -1 )"
+    - "\t\treturn"
+    - "\telseif (button == 0 )"
+    - "\t\tPlaySound, \"menu click\""
+    - "\t\tMessageBox \"Динамическая регенерация магии активирована.\""
+    - "\t\tset al_mpregen_check to 1"
+    - "\t\tset difftize to 0"
+    - "\t\tset button to -1"
+    - "\t\tif ( ScriptRunning, al_1MagickaRegCheck == 0 )"
+    - "\t\t\tstartscript \"al_1MagickaRegCheck\""
+    - "\t\tendif"
+    - "\t\tstartscript \"al_TRAVGlobalScr\""
+    - "\t\tStopScript \"al_MPREGEN\""
+    - "\telseif (button == 1 )"
+    - "\t\tPlaySound, \"menu click\""
+    - "\t\tMessageBox \"Вы отказались от динамической регенерации магии.\""
+    - "\t\tset al_mpregen_check to -1"
+    - "\t\tset difftize to 0"
+    - "\t\tset button to -1"
+    - "\t\tstartscript \"al_TRAVGlobalScr\""
+    - "\t\tstopscript \"al_1MagickaRegCheck\""
+    - "\t\tstopscript \"al_1MagickaRegeneration\""
+    - "\t\tStopScript \"al_MPREGEN\""
+    - "\tendif"
+    - endif
+    - ''
+    - StopScript "al_MPREGEN"
+    - ''
+    - End
+
+- SSCR:
+  - DATA: '193052334375744925'
+  - NAME: al_1MagickaRegCheck
