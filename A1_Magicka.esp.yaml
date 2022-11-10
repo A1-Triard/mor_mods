@@ -7,11 +7,11 @@
       - Восстановление магии, выдранное из сборника модов MFR.
       records: 8
   - MAST: Morrowind.esm
-  - DATA: 79764287
-  - MAST: Tribunal.esm
-  - DATA: 6616539
+  - DATA: 79765994
   - MAST: Bloodmoon.esm
-  - DATA: 11799703
+  - DATA: 11801192
+  - MAST: Tribunal.esm
+  - DATA: 6618333
   
 - GLOB:
   - NAME: KPCMagickaMultiplier
@@ -211,27 +211,20 @@
       vars:
         shorts: 2
         longs: 0
-        floats: 0
-      data_size: 667
-      var_table_size: 16
+        floats: 1
+      data_size: 715
+      var_table_size: 22
   - SCVR:
     - Button
     - difftize
-  - SCDT: eJxtkb9r20Acxe8EcSxPB6V0qFve0KlVjdU9dCihU0rJ5K0YI9KQxIX++DP6T4WsHbufzznyjSVddWcaB2yinJzIxMGb7um+733ufRuch+hBYGcH8Sse8gYPQvwIWCV0mfjN/hqnU8JoDjWPMHOm+pLXEpkcUwllrHUylyolJVNpF7AGqtCZznUGhQupyFJmrCMYV03qSxTSzkGwlHovk9J7nGJkbjZZuoUtkWuMpufadVjw5kxG+De1boHMlPcTTk7Wp7SzZYdFf7SLsBz/b2bT6poZm/qmUanO6c6COmyL+1cHiKsKnq4qiL3M2RZ6LwVrcN6CP1X6W19WkzfD+twNROskGf7C4PhwcMRExM4olxnNtJ3IEoUe+z4KeVXnQU4cKSqM8sgdVqe/W8Zte3vEeO0Dgd4LEeHkSf/4S7zXP/Dm/f3k4MPXZHC0zH0uNv0KeVu0vL73eX/34+6nJt9ekcaPSLvsdO43M5EXMiW/Pr+k8xW6uXyATnVVm2nbG0na4tm6mgyT7/2fh9+Ga4Qhf4TM+S3MC0H1
+    - timer
+  - SCDT: eJx1ks9rE0EUx2cW0maDh0EpHozyFXqya8h68GTxUEpOFamX3GQJa1vaRmjjn+E/VXr16H0y6dAxuztmJmiEBNfZTROMxNv7Me+9z/u+2aBbPi49gt1dhBV6SUkF7SeMbFBag/OK+PNwm1Zp1V/4TY/VzuPuJ3TOTjqnhAXkWmU8VRNphjzHSA5kJkf8p8qR8oFS4EOrhBppwTPeIMSN8YiHF+W4TdceIZ65gUD7MQtw/iA6ex8eREeueXQYH+0dx53Tcu4jti7l0zqrufjB28P91v6bKt1ckob/kDbJ1RTaDvktT5SZORM3S3T97S90NUf/H219LUmdPVyNxt34IuqdfOyuEPrUp25dH22wknJ7HthC697ecXTRirvvelEvxtO59kXSq+KD2+kVXlaoM2ql177PsHOXX16xSdhn8lVbmSj0pxDTABOrC4v/4uVWOYQ2xrpjiEQJnnCnhNEQI5m67VMI3HKhjEq1sarQyFVKJw43UygYlbheOlGvcYW+/r2upZ2ZHJlEf3wjbYN4O9c8wPexsTOkOr+rsHy4WiWtyRsk+CJtgLL8h56Mi2d6oBcvtUhktvhYjcVxQp9S+gcF6Eg1
   - SCTX:
     - begin al_MPREGEN
     - ''
     - short Button
     - short difftize
-    - ''
-    - If ( MenuMode == 1 )
-    - "\tReturn"
-    - Endif
-    - ''
-    - if ( difftize == 0 )
-    - "\tmessagebox \"Хотели бы вы, чтобы ваша магия восстанавливалась со временем в зависимости от вашей расы и силы воли? В бою магия восстанавливаться не будет.\", \"Да, пусть моя магия так восстанавливается.\", \"Нет, я не хочу такого восстановления магии.\""
-    - "\tset difftize to 1"
-    - Endif
+    - float timer
     - ''
     - if ( difftize == 1 )
     - "\tSet button to GetButtonPressed"
@@ -261,7 +254,23 @@
     - "\tendif"
     - endif
     - ''
-    - StopScript "al_MPREGEN"
+    - If ( MenuMode == 1 )
+    - "\tReturn"
+    - Endif
+    - ''
+    - if ( CharGenState != -1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( timer < 6 )
+    - "\tset timer to ( timer + GetSecondsPassed )"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( difftize == 0 )
+    - "\tmessagebox \"Хотели бы вы, чтобы ваша магия восстанавливалась со временем в зависимости от вашей расы и силы воли? В бою магия восстанавливаться не будет.\", \"Да, пусть моя магия так восстанавливается.\", \"Нет, я не хочу такого восстановления магии.\""
+    - "\tset difftize to 1"
+    - Endif
     - ''
     - End
   
