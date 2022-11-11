@@ -8,11 +8,11 @@
       - Требует начала новой игры
       records: 3
   - MAST: Morrowind.esm
-  - DATA: 79764287
+  - DATA: 79765994
   - MAST: Tribunal.esm
-  - DATA: 6616539
+  - DATA: 6618333
   - MAST: Bloodmoon.esm
-  - DATA: 11799703
+  - DATA: 11801192
   
 - GMST:
   - NAME: fCombatCriticalStrikeMult
@@ -24,26 +24,22 @@
       vars:
         shorts: 1
         longs: 1
-        floats: 1
-      data_size: 207
-      var_table_size: 19
+        floats: 0
+      data_size: 152
+      var_table_size: 13
   - SCVR:
     - luckMod
     - luck
-    - timer
-  - SCDT: eJxljr0KwkAQhG8it7JicfEJprBSAnvYqBB9jWsttEohWtlZ+9RuNATBZn/Yb2ZHAGVhYtsyL6GIuCDM6IVlkbgWRAdedQ+YYKK8+6mnI3yqaBEdgrLJ9M7VHHLtTo/zbZ98D4op4q/OBl0ewcFgZyzbxObPQCGovpEO/tdGYFOH8Dx+EnsOBfAGec8eBQ==
+  - SCDT: eJxlTLsJgDAUzCmJPLCIG1xhJQhJp4J72FrYpRCtXMGpjRJEsLr/GUA40XIc6WsIDHQ0zuo2nEEu3KGeVCOyjE4jQAlbz4hsSpg1zMeyDTZqJSigvzuXdv4tpoPeceos29+BALgAJe4WAA==
   - SCTX:
     - begin A1_Sneak
     - ''
     - long luck
     - short luckMod
-    - float timer
     - ''
     - if ( MenuMode == 1 )
     - "\treturn"
     - endif
-    - ''
-    - set timer to ( timer + GetSecondsPassed )
     - ''
     - if ( GetPCSneaking == 0 )
     - "\tif ( luckMod == 1 )"
@@ -59,13 +55,7 @@
     - "\tendif"
     - endif
     - ''
-    - if ( timer >= 10 )
-    - "\tplayer->ModCurrentMagicka 1"
-    - "\tset timer to 0"
-    - endif
-    - ''
     - end
-    - ''
   
 - SSCR:
   - DATA: '204221753077134255'
