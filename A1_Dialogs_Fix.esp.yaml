@@ -1,0 +1,35 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: A1
+      description:
+      - Исправления ошибок в диалогах.
+      records: 2
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+ 
+- DIAL:
+  - NAME: Посох Серебряной Зари
+  - DATA: Topic
+  
+- INFO:
+  - INAM: '22122235832069916495'
+  - PNAM: '2721111286380525163'
+  - NNAM: '1053881362062210014'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - ONAM: arielle phiencel
+  - NAME: Да, у меня есть Посох Серебряной Зари. Я не очень часто им пользуюсь. Предпочитаю кинжалы. Я продам его вам за 300 дрейков.
+  - BNAM:
+    - Choice "Дать ей 300 дрейков." 1 "Неважно." 2
+  
