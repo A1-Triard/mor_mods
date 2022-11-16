@@ -5,7 +5,7 @@
       author: ''
       description:
       - ''
-      records: 6
+      records: 8
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -158,6 +158,14 @@
     - End
   
 - DOOR:
+  - NAME: DL_SadrithMora3
+  - MODL: d\Ex_T_door_02.nif
+  - FNAM: Бронзовая дверь
+  - SCRI: DL_StoreLock40
+  - SNAM: Door Heavy Open
+  - ANAM: Door Heavy Close
+  
+- DOOR:
   - NAME: DL_Ghostgate1
   - MODL: d\Ex_Velothi_loaddoor_01.NIF
   - FNAM: Деревянная дверь
@@ -170,4 +178,35 @@
   - FNAM: Деревянная дверь
   - SNAM: Door Heavy Open
   - ANAM: Door Heavy Close
+  
+- CELL:
+  - NAME: Sadrith Mora
+  - DATA:
+      flags: HAS_WATER ILLEGAL_TO_SLEEP _40
+      position:
+        kind: Exterior
+        x: 17
+        y: 4
+  - RGNN: Azura's Coast Region
+  - NAM5: 6333898
+  - FRMR: 16786084
+  - NAME: DL_SadrithMora3
+  - ANAM: thervul serethi
+  - INTV: 0.0
+  - NAM9: 1
+  - DODT:
+      x: 155.61618
+      y: -12.405955
+      z: 235.31635
+      x_rot: 0.0
+      y_rot: 0.0
+      z_rot: 4.5831866
+  - DNAM: 'Sadrith Mora, Thervul Serethi: Healer'
+  - DATA:
+      x: 146497.44
+      y: 35442.46
+      z: 875.695
+      x_rot: 0.0
+      y_rot: 0.0
+      z_rot: 0.30019662
   
