@@ -5,7 +5,7 @@
       author: ''
       description:
       - ''
-      records: 4
+      records: 6
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -156,4 +156,18 @@
     - "\tendif"
     - endif
     - End
+  
+- DOOR:
+  - NAME: DL_Ghostgate1
+  - MODL: d\Ex_Velothi_loaddoor_01.NIF
+  - FNAM: Деревянная дверь
+  - SNAM: Door Heavy Open
+  - ANAM: Door Heavy Close
+  
+- DOOR:
+  - NAME: DL_Ghostgate2
+  - MODL: d\Ex_Velothi_loaddoor_01.NIF
+  - FNAM: Деревянная дверь
+  - SNAM: Door Heavy Open
+  - ANAM: Door Heavy Close
   
