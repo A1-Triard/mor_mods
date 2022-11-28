@@ -1,0 +1,101 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: ''
+      description:
+      - ''
+      records: 6
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- SCPT:
+  - SCHD:
+      name: A1_Swap
+      vars:
+        shorts: 0
+        longs: 0
+        floats: 6
+      data_size: 180
+      var_table_size: 18
+  - SCVR:
+    - sx
+    - sy
+    - sz
+    - px
+    - py
+    - pz
+  - SCDT: eJxVTrsNgCAUfE8FE7VgAAtXcARnsAEaQyGVBbExbu8RQoTq/skJ9kxy0YPSJNg3iZvI28QtTSzD5d7zhtnlcmmKvCpNmeej0pgBDIoAi+hvxpQrbfCi1BZPaFb9th774wLzB0dtH9Y=
+  - SCTX:
+    - begin A1_Swap
+    - ''
+    - float sx
+    - float sy
+    - float sz
+    - float px
+    - float py
+    - float pz
+    - ''
+    - set sx to ( GetPos X )
+    - set sy to ( GetPos Y )
+    - set sz to ( GetPos Z )
+    - set px to ( player->GetPos X )
+    - set py to ( player->GetPos Y )
+    - set pz to ( player->GetPos Z )
+    - SetPos X px
+    - SetPos Y py
+    - SetPos Z pz
+    - player->SetPos X sx
+    - player->SetPos Y sy
+    - player->SetPos Z sz
+    - ''
+    - StopScript A1_Swap
+    - ''
+    - end
+  
+- SCPT:
+  - SCHD:
+      name: A1_SwapInit
+      vars:
+        shorts: 0
+        longs: 0
+        floats: 0
+      data_size: 29
+      var_table_size: 0
+  - SCDT: eJxTEuB68uClwvsP715+eiEjwO1oGB9cnljgmZdZwsgIANpqDNM=
+  - SCTX:
+    - begin A1_SwapInit
+    - ''
+    - AddTopic "дай пройти"
+    - ''
+    - StopScript A1_SwapInit
+    - ''
+    - end
+  
+- SSCR:
+  - DATA: '2876715502191674091'
+  - NAME: A1_SwapInit
+  
+- DIAL:
+  - NAME: дай пройти
+  - DATA: Topic
+  
+- INFO:
+  - INAM: '205222937160338162'
+  - PNAM: ''
+  - NNAM: ''
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - NAME: Проходи. [Меняется с вами местами.]
+  - BNAM:
+    - StartScript A1_Swap
+  
