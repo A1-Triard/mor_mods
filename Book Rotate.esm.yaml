@@ -2,11 +2,11 @@
   - HEDR:
       version: 1067869798
       type: ESM
-      author: "Cydine / лок. Menorra\0on/л.Meno"
+      author: Cydine / лок. Menorra / испр. A1
       description:
       - Плагин позволяет вам аккуратно раскладывать книги по полкам.
       - ''
-      - "Базовый esm. Использовать только если у вас установлен Трибунал и\\или Бладмун в связке с соответствующим esp!\0 info."
+      - Базовый esm. Использовать только если у вас установлен Трибунал и/или Бладмун в связке с соответствующим esp!
       - ''
       - Mail me with any bugs, suggestions, comments etc - cydine@hotmail.com
       records: 496
@@ -39868,6 +39868,8 @@
   - NAME: "Спасибо, %PCName. Я скоро отдам вам книгу. А пока у меня есть для вас @задание\x7F\x7F#."
   - SCVR: 01500
   - INTV: 1
+  - SCVR: 15IX2BookSkill_Heavy Armor3
+  - INTV: 0
   - BNAM:
     - Player->RemoveItem "BookSkill_Heavy Armor3" 1
     - Set bookInBox to 0
@@ -39888,7 +39890,7 @@
       padding: 0
   - ONAM: edwinna elbert
   - DNAM: Mages Guild
-  - NAME: Спасибо, %PCName. Я скоро отдам вам книгу. А пока у меня есть для вас задание.
+  - NAME: "Спасибо, %PCName. Я скоро отдам вам книгу. А пока у меня есть для вас @задание\x7F\x7F#."
   - SCVR: 01500
   - INTV: 1
   - SCVR: 15IX2BookSkill_Heavy Armor3_closed
@@ -39992,6 +39994,8 @@
   - NAME: Благодарю. Я не забуду этой услуги. Просто совет... Никому не говорите об этой книге, %PCName. Некоторые члены @Гильдии Магов# могут начать завидовать.
   - SCVR: 01500
   - INTV: 1
+  - SCVR: 15IX2BookSkill_Heavy Armor3
+  - INTV: 0
   - SCVR: 34JX3MG_ReturnBook
   - INTV: 10
   - BNAM:
@@ -40042,6 +40046,8 @@
   - NAME: Благодарю. Я не забуду этой услуги. Просто совет... Никому не говорите об этой книге, %PCName. Некоторые члены @Гильдии Магов# могут начать завидовать.
   - SCVR: 01500
   - INTV: 1
+  - SCVR: 15IX2BookSkill_Heavy Armor3
+  - INTV: 0
   - BNAM:
     - Player->RemoveItem "BookSkill_Heavy Armor3" 1
     - AddItem "BookSkill_Heavy Armor3" 1
