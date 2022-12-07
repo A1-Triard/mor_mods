@@ -1,0 +1,110 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      type: ESP
+      author: A1
+      description:
+      - Potion Upgrade.esp + EcoAdjMisc.esp fix
+      records: 5
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  
+- ALCH:
+  - NAME: HF_Eco_p_restore_fatigue_s
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Восстановить запас сил стандарт
+  - ALDT:
+      weight: 0.75
+      value: 0
+      auto_calculate_value: false
+  - ENAM:
+      index: RestoreFatigue
+      skill: null
+      attribute: null
+      range: Self
+      area: 0
+      duration: 5
+      magnitude_min: 20
+      magnitude_max: 20
+  
+- ALCH:
+  - NAME: HF_Eco_p_restore_health_s
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Восстановить здоровье стандарт.
+  - ALDT:
+      weight: 0.75
+      value: 0
+      auto_calculate_value: false
+  - ENAM:
+      index: RestoreHealth
+      skill: null
+      attribute: null
+      range: Self
+      area: 0
+      duration: 5
+      magnitude_min: 10
+      magnitude_max: 10
+  
+- ALCH:
+  - NAME: HF_Ecop_restore_health_c
+  - MODL: m\K_Cheap_Aqua.nif
+  - TEXT: m\K_Cheap_Aqua.dds
+  - FNAM: Восстановить здоровье дешевое
+  - ALDT:
+      weight: 1.0
+      value: 0
+      auto_calculate_value: false
+  - ENAM:
+      index: RestoreHealth
+      skill: null
+      attribute: null
+      range: Self
+      area: 0
+      duration: 5
+      magnitude_min: 2
+      magnitude_max: 2
+  
+- ALCH:
+  - NAME: HF_Eco_p_fortify_willpower_s
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Увеличить силу воли стандартное
+  - ALDT:
+      weight: 0.75
+      value: 0
+      auto_calculate_value: false
+  - ENAM:
+      index: FortifyAttribute
+      skill: null
+      attribute: Willpower
+      range: Self
+      area: 0
+      duration: 30
+      magnitude_min: 10
+      magnitude_max: 10
+  
+- ALCH:
+  - NAME: HF_Eco_p_restore_magicka_s
+  - MODL: m\K_Fresh_Aqua.nif
+  - TEXT: m\K_Fresh_Aqua.dds
+  - FNAM: Восстановить магию стандартное
+  - ALDT:
+      weight: 0.75
+      value: 0
+      auto_calculate_value: false
+  - ENAM:
+      index: RestoreSpellPoints
+      skill: null
+      attribute: null
+      range: Self
+      area: 0
+      duration: 5
+      magnitude_min: 10
+      magnitude_max: 10
+  
