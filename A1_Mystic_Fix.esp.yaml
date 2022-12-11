@@ -12,7 +12,7 @@
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
-  
+
 - MGEF:
   - INDX: Telekinesis
   - MEDT:
@@ -30,7 +30,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Этот эффект позволяет персонажу поднимать предметы или открывать контейнеры, находясь на значительной дистанции. Мощность заклинания непосредственно оказывает влияние на расстояние, с которого субъект может оперировать.
-  
+
 - MGEF:
   - INDX: Recall
   - MEDT:
@@ -48,7 +48,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Субъект данного заклинания немедленно перемещается в пространстве на то место, на котором был задействован эффект Пометки.
-  
+
 - MGEF:
   - INDX: DivineIntervention
   - MEDT:
@@ -66,7 +66,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Субъект этого заклинания мгновенно переносится к ближайшему алтарю Имперского Культа.
-  
+
 - MGEF:
   - INDX: AlmsiviIntervention
   - MEDT:
@@ -84,7 +84,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Субъект этого эффекта непосредственно после чтения перемещается к алтарю ближайшего храма или часовни, исповедующего культ Трибунала.
-  
+
 - MGEF:
   - INDX: SpellAbsorption
   - MEDT:
@@ -102,7 +102,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Этот эффект позволяет читающему его поглощать силу атакующих заклинаний и пополнять за их счет свои запасы магической энергии. Мощность заклинания непосредственно влияет на процентный шанс поглощения атакующего заклинания. Если эффект успешен, то заклинатель прибавит очки магической энергии атакующего заклинания к своим собственным. (Запас магической энергии заклинателя не может увеличиться более максимального для него предела).  Если попытка поглощения безуспешна, атакующее заклинание оказывает нормальное воздействие.
-  
+
 - MGEF:
   - INDX: AbsorbAttribute
   - MEDT:
@@ -120,7 +120,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Этот эффект временно переносит часть показателя характеристики на заклинателя. Только Сила, Интеллект, Воля, Ловкость, Скорость, Выносливость, Привлекательность и Удача могут быть изменены этим эффектом. Заклинатель может превысить свои максимальные значения характеристик на время действия заклинания. Когда эффект заканчивает свое действие, и заклинатель и жертва возвращаются к исходным значениям характеристик.
-  
+
 - MGEF:
   - INDX: AbsorbHealth
   - MEDT:
@@ -138,7 +138,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Этот эффект временно переносит часть здоровья с жертвы на заклинателя, ухудшая здоровье жертвы и улучшая здоровье заклинателя. Значение здоровья заклинателя может превысить максимум на время действия эффекта. Когда эффект заканчивает свое действие, заклинатель теряет поглощенное здоровье, а жертва приобретает его.
-  
+
 - MGEF:
   - INDX: AbsorbSpellPoints
   - MEDT:
@@ -156,7 +156,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Этот эффект временно переносит часть магической энергии от жертвы к заклинателю, уменьшая запас Магической энергии у жертвы и пополняя его у заклинателя. Заклинатель может превысить свое нормальное значение этой характеристики на время действия заклинания. Когда эффект заканчивает свое действие, заклинатель теряет поглощенную магию, а жертва возвращает ее.
-  
+
 - MGEF:
   - INDX: AbsorbFatigue
   - MEDT:
@@ -174,7 +174,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Этот эффект временно отнимает часть запаса сил у жертвы и добавляет его заклинателю. Заклинатель может превысить свое нормальное значение этой характеристики на время действия заклинания. Когда эффект заканчивает свое действие, заклинатель теряет поглощенные силы, а жертва возвращает их.
-  
+
 - MGEF:
   - INDX: AbsorbSkill
   - MEDT:
@@ -192,7 +192,7 @@
   - HVFX: VFX_MysticismHit
   - AVFX: VFX_MysticismArea
   - DESC: Этот эффект временно отнимает у жертвы некоторое умение, и увеличивает умение заклинателя. Когда эффект заканчивает свое действие, заклинатель теряет приобретенный навык, а жертва возвращает его себе.
-  
+
 - SCPT:
   - SCHD:
       name: CountWizardSpells
@@ -205,7 +205,9 @@
   - SCVR:
     - hasLevitate
     - hasFire
-  - SCDT: eJyNzt8KgjAUBvCONc2oUIigCNoj6AN4FfQCXdRdLFwizT+crcKePtcUiihkF+Mcft/hIyChZ9GAgLT0Pwa7FKziaAPM6GHt02Io+C1VTHEaRTQkJhC68E4Xhk7uqYhpB780fpogZ6pLYG4Co3OKnEpVYNZi6xu3xTU+MSH+0LbItqFHwTDhvwOOZwKDjOHlxWwgLq0rNwPUg9VrDiBhWBW57Os7DsDnJnBBv5Xnb4prrvbpg2G8K7kQEuAJJY1W+Q==
+  - SCDT: "eJyNzt8KgjAUBvCONc2oUIigCNoj6AN4FfQCXdRdLFwizT+crcKePtcUiihkF+Mcft/hIyChZ9GAgLT0Pwa7FKziaAPM6GHt02Io+C1VTHEaRTQk\
+           JhC68E4Xhk7uqYhpB780fpogZ6pLYG4Co3OKnEpVYNZi6xu3xTU+MSH+0LbItqFHwTDhvwOOZwKDjOHlxWwgLq0rNwPUg9VrDiBhWBW57Os7DsDn\
+           JnBBv5Xnb4prrvbpg2G8K7kQEuAJJY1W+Q=="
   - SCTX:
     - Begin CountWizardSpells
     - ''
@@ -253,11 +255,11 @@
     - StopScript CountWizardSpells
     - ''
     - End
-  
+
 - DIAL:
   - NAME: заклинания волшебника
   - DATA: Topic
-  
+
 - INFO:
   - INAM: '3088429521932618889'
   - PNAM: '24187163892101531244'
@@ -275,4 +277,3 @@
   - INTV: 100
   - BNAM:
     - Journal HT_WizardSpells 10
-  

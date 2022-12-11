@@ -12,7 +12,7 @@
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
-  
+
 - ALCH:
   - NAME: HF_Eco_p_restore_fatigue_s
   - MODL: m\K_Fresh_Aqua.nif
@@ -31,7 +31,7 @@
       duration: 5
       magnitude_min: 20
       magnitude_max: 20
-  
+
 - ALCH:
   - NAME: HF_Eco_p_restore_health_s
   - MODL: m\K_Fresh_Aqua.nif
@@ -50,7 +50,7 @@
       duration: 5
       magnitude_min: 10
       magnitude_max: 10
-  
+
 - ALCH:
   - NAME: HF_Ecop_restore_health_c
   - MODL: m\K_Cheap_Aqua.nif
@@ -69,7 +69,7 @@
       duration: 5
       magnitude_min: 2
       magnitude_max: 2
-  
+
 - ALCH:
   - NAME: HF_Eco_p_fortify_willpower_s
   - MODL: m\K_Fresh_Aqua.nif
@@ -88,7 +88,7 @@
       duration: 30
       magnitude_min: 10
       magnitude_max: 10
-  
+
 - ALCH:
   - NAME: HF_Eco_p_restore_magicka_s
   - MODL: m\K_Fresh_Aqua.nif
@@ -107,4 +107,3 @@
       duration: 5
       magnitude_min: 10
       magnitude_max: 10
-  

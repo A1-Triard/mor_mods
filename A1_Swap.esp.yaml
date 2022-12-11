@@ -12,7 +12,7 @@
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
-  
+
 - SCPT:
   - SCHD:
       name: A1_Swap
@@ -29,7 +29,8 @@
     - px
     - py
     - pz
-  - SCDT: eJxVTrsNgCAUfE8FE7VgAAtXcARnsAEaQyGVBbExbu8RQoTq/skJ9kxy0YPSJNg3iZvI28QtTSzD5d7zhtnlcmmKvCpNmeej0pgBDIoAi+hvxpQrbfCi1BZPaFb9th774wLzB0dtH9Y=
+  - SCDT: "eJxVTrsNgCAUfE8FE7VgAAtXcARnsAEaQyGVBbExbu8RQoTq/skJ9kxy0YPSJNg3iZvI28QtTSzD5d7zhtnlcmmKvCpNmeej0pgBDIoAi+hvxpQr\
+           bfCi1BZPaFb9th774wLzB0dtH9Y="
   - SCTX:
     - begin A1_Swap
     - ''
@@ -56,7 +57,7 @@
     - StopScript A1_Swap
     - ''
     - end
-  
+
 - SCPT:
   - SCHD:
       name: A1_SwapInit
@@ -75,15 +76,15 @@
     - StopScript A1_SwapInit
     - ''
     - end
-  
+
 - SSCR:
   - DATA: '2876715502191674091'
   - NAME: A1_SwapInit
-  
+
 - DIAL:
   - NAME: дай пройти
   - DATA: Topic
-  
+
 - INFO:
   - INAM: '205222937160338162'
   - PNAM: ''
@@ -98,4 +99,3 @@
   - NAME: Проходи. [Меняется с вами местами.]
   - BNAM:
     - StartScript A1_Swap
-  

@@ -12,7 +12,7 @@
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
-  
+
 - SCPT:
   - SCHD:
       name: DL_ResLock20
@@ -24,7 +24,8 @@
       var_table_size: 5
   - SCVR:
     - Done
-  - SCDT: eJyFjUEKgCAURB1TyVUKHeAfQTdFkG3tGi1aRlB0/xQiqk3LgXnvKQhLsYzTMo/rsdEQyHcKXNMORiGQa2zNJNLi5DU0FET1JHpqf/7SfAoJKMzbkaO4Jf4SuCzQAE71hBpN
+  - SCDT: "eJyFjUEKgCAURB1TyVUKHeAfQTdFkG3tGi1aRlB0/xQiqk3LgXnvKQhLsYzTMo/rsdEQyHcKXNMORiGQa2zNJNLi5DU0FET1JHpqf/7SfAoJKMzb\
+           kaO4Jf4SuCzQAE71hBpN"
   - SCTX:
     - Begin DL_ResLock20
     - short Done
@@ -48,7 +49,7 @@
     - "\tendif"
     - endif
     - End
-  
+
 - SCPT:
   - SCHD:
       name: DL_ResLock30
@@ -60,7 +61,8 @@
       var_table_size: 5
   - SCVR:
     - Done
-  - SCDT: eJyFjUEKgCAURB1TyVV6gfhH0E0RZFu7RouWERTdP4WIatNyYN57CsJSLOO0zON6bDQE8p0C17SDUQjkGlszibQ4eQ0NBVE9iZ7an780n0ICCvN25Chuib8ELgs0gBP94Bph
+  - SCDT: "eJyFjUEKgCAURB1TyVV6gfhH0E0RZFu7RouWERTdP4WIatNyYN57CsJSLOO0zON6bDQE8p0C17SDUQjkGlszibQ4eQ0NBVE9iZ7an780n0ICCvN2\
+           5Chuib8ELgs0gBP94Bph"
   - SCTX:
     - Begin DL_ResLock30
     - short Done
@@ -84,7 +86,7 @@
     - "\tendif"
     - endif
     - End
-  
+
 - SCPT:
   - SCHD:
       name: DL_ResLock50
@@ -96,7 +98,8 @@
       var_table_size: 5
   - SCVR:
     - Done
-  - SCDT: eJyFjUEKgCAURB1TyVV6g38EbVEE2dau0aJlBEX3TyGi2rQcmPeegrAUyzgt87geGw2BfKfANe1gFAK5xtZMIi1OXkNDQVRPoqf25y/Np5CAwrwdOYpb4i+BywIN4AQOpxqJ
+  - SCDT: "eJyFjUEKgCAURB1TyVV6g38EbVEE2dau0aJlBEX3TyGi2rQcmPeegrAUyzgt87geGw2BfKfANe1gFAK5xtZMIi1OXkNDQVRPoqf25y/Np5CAwrwd\
+           OYpb4i+BywIN4AQOpxqJ"
   - SCTX:
     - Begin DL_ResLock50
     - short Done
@@ -120,7 +123,7 @@
     - "\tendif"
     - endif
     - End
-  
+
 - SCPT:
   - SCHD:
       name: DL_ResLock60
@@ -132,7 +135,8 @@
       var_table_size: 5
   - SCVR:
     - Done
-  - SCDT: eJyFjUEKgCAURB1TyVV6g38E3RSBtrVrtGgZQdH9U4ioNi0H5r2nICylOk3LPK7HRkMk3ytwTTsYxUiutYFJ5MXJa2goiOZJBOp+/tJ8ChmozNtRorgl/hK4ItAAThcDGp0=
+  - SCDT: "eJyFjUEKgCAURB1TyVV6g38E3RSBtrVrtGgZQdH9U4ioNi0H5r2nICylOk3LPK7HRkMk3ytwTTsYxUiutYFJ5MXJa2goiOZJBOp+/tJ8ChmozNtR\
+           orgl/hK4ItAAThcDGp0="
   - SCTX:
     - Begin DL_ResLock60
     - short Done
@@ -156,7 +160,7 @@
     - "\tendif"
     - endif
     - End
-  
+
 - DOOR:
   - NAME: DL_SadrithMora3
   - MODL: d\Ex_T_door_02.nif
@@ -164,21 +168,21 @@
   - SCRI: DL_StoreLock40
   - SNAM: Door Heavy Open
   - ANAM: Door Heavy Close
-  
+
 - DOOR:
   - NAME: DL_Ghostgate1
   - MODL: d\Ex_Velothi_loaddoor_01.NIF
   - FNAM: Деревянная дверь
   - SNAM: Door Heavy Open
   - ANAM: Door Heavy Close
-  
+
 - DOOR:
   - NAME: DL_Ghostgate2
   - MODL: d\Ex_Velothi_loaddoor_01.NIF
   - FNAM: Деревянная дверь
   - SNAM: Door Heavy Open
   - ANAM: Door Heavy Close
-  
+
 - CELL:
   - NAME: Sadrith Mora
   - DATA:
@@ -209,4 +213,3 @@
       x_rot: 0.0
       y_rot: 0.0
       z_rot: 0.30019662
-  

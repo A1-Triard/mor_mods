@@ -12,12 +12,11 @@
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
-  
+
 - GMST:
   - NAME: fTravelMult
   - FLTV: 1000.0
-  
+
 - GMST:
   - NAME: fMagesGuildTravel
   - FLTV: 150.0
-  

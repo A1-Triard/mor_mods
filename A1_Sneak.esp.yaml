@@ -13,11 +13,11 @@
   - DATA: 6618333
   - MAST: Bloodmoon.esm
   - DATA: 11801192
-  
+
 - GMST:
   - NAME: fCombatCriticalStrikeMult
   - FLTV: 40.0
-  
+
 - SCPT:
   - SCHD:
       name: A1_Sneak
@@ -30,7 +30,8 @@
   - SCVR:
     - luckMod
     - luck
-  - SCDT: eJxlTLsJgDAUzCmJPLCIG1xhJQhJp4J72FrYpRCtXMGpjRJEsLr/GUA40XIc6WsIDHQ0zuo2nEEu3KGeVCOyjE4jQAlbz4hsSpg1zMeyDTZqJSigvzuXdv4tpoPeceos29+BALgAJe4WAA==
+  - SCDT: "eJxlTLsJgDAUzCmJPLCIG1xhJQhJp4J72FrYpRCtXMGpjRJEsLr/GUA40XIc6WsIDHQ0zuo2nEEu3KGeVCOyjE4jQAlbz4hsSpg1zMeyDTZqJSig\
+           vzuXdv4tpoPeceos29+BALgAJe4WAA=="
   - SCTX:
     - begin A1_Sneak
     - ''
@@ -56,8 +57,7 @@
     - endif
     - ''
     - end
-  
+
 - SSCR:
   - DATA: '204221753077134255'
   - NAME: A1_Sneak
-  

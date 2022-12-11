@@ -12,7 +12,7 @@
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
-  
+
 - SCPT:
   - SCHD:
       name: _MS_AshEffects
@@ -25,7 +25,14 @@
   - SCVR:
     - state
     - timer
-  - SCDT: eJydlMtu00AUhjOFhjhtUxtQSiG0h9sKIjkRFyERJCRQKkFZABLZjSb2xGOwZyKPkwArnoEdS54EeCMegXEmcd2osdMoUiTb33/O/8/llBEyoAcmdDrQuosMtIkGqFQF9Qe9yybcL6OLCvhlwq0OPC6jjfThScOs4eP3+IVkrwYD6sQykRtIM1vWtOKZTBmhyrTBs6TlJXQ87bkB9jYqDwPylUYPrVKp9EdxFnSNd4S7ImzZNjyHp49OMf/+Gih9oRpXoffDVGWbbXvD3DmiJIgZvCQh8WiKtZXu++8kqJw2VV3q0K2NOf5ISeRz743vsKn5GdFOpRWE9qH30wKx0xechiJwMaNBmKVbWfqOpvdS2iOs+WkUEI4Zc8lSHWjdVZeO/QCUkoITkT7kNrumRdshjXxJeD5c13BVxiIK89EbGt11VQSeMbOMv6752pgGImZ+kjWv/G2N19M1GogRd2kk8UoBvIDIAvRQo1ci6opI2QmJjGmEVwodKoWHY8G9c6YgUTjizaLw841OZQ4bfaP++qdqlWYO82Of4wmJHRYWiRpaZM5Eau0+5wvuacE+p6o8DiiJmVrsvvADWnBb9rRyS7fKP5TzQ+ar2RCpO5LANC6OToeMBGIotBV89OHt61MixR5Aty79LwxrdayOjByoW0LdZOzZczKZY5sGqIekgJ0ZQxfUBh1aD9RpwKHEk9kKEMkwF/NQJ/xNawmWEgfW7gKR+WRmP0kuJgaqZHy1sr4aM1+L5RYN5bQr9nqmoUpqqJ2d13mGWmvnz3Y411asGS/5IfQf0SrqPw==
+  - SCDT: "eJydlMtu00AUhjOFhjhtUxtQSiG0h9sKIjkRFyERJCRQKkFZABLZjSb2xGOwZyKPkwArnoEdS54EeCMegXEmcd2osdMoUiTb33/O/8/llBEyoAcm\
+           dDrQuosMtIkGqFQF9Qe9yybcL6OLCvhlwq0OPC6jjfThScOs4eP3+IVkrwYD6sQykRtIM1vWtOKZTBmhyrTBs6TlJXQ87bkB9jYqDwPylUYPrVKp\
+           9EdxFnSNd4S7ImzZNjyHp49OMf/+Gih9oRpXoffDVGWbbXvD3DmiJIgZvCQh8WiKtZXu++8kqJw2VV3q0K2NOf5ISeRz743vsKn5GdFOpRWE9qH3\
+           0wKx0xechiJwMaNBmKVbWfqOpvdS2iOs+WkUEI4Zc8lSHWjdVZeO/QCUkoITkT7kNrumRdshjXxJeD5c13BVxiIK89EbGt11VQSeMbOMv6752pgG\
+           ImZ+kjWv/G2N19M1GogRd2kk8UoBvIDIAvRQo1ci6opI2QmJjGmEVwodKoWHY8G9c6YgUTjizaLw841OZQ4bfaP++qdqlWYO82Of4wmJHRYWiRpa\
+           ZM5Eau0+5wvuacE+p6o8DiiJmVrsvvADWnBb9rRyS7fKP5TzQ+ar2RCpO5LANC6OToeMBGIotBV89OHt61MixR5Aty79LwxrdayOjByoW0LdZOzZ\
+           czKZY5sGqIekgJ0ZQxfUBh1aD9RpwKHEk9kKEMkwF/NQJ/xNawmWEgfW7gKR+WRmP0kuJgaqZHy1sr4aM1+L5RYN5bQr9nqmoUpqqJ2d13mGWmvn\
+           z3Y411asGS/5IfQf0SrqPw=="
   - SCTX:
     - begin _MS_AshEffects
     - ''
@@ -136,4 +143,3 @@
     - endif
     - ''
     - end
-  

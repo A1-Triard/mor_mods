@@ -12,7 +12,7 @@
   - DATA: 6618333
   - MAST: Bloodmoon.esm
   - DATA: 11801192
-  
+
 - SCPT:
   - SCHD:
       name: A1_Fatigue
@@ -29,8 +29,7 @@
     - player->ModCurrentFatigue -0.001
     - ''
     - End
-  
+
 - SSCR:
   - DATA: '1769025121873217191'
   - NAME: A1_Fatigue
-  

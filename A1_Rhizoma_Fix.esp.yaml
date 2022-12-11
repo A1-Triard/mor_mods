@@ -12,7 +12,7 @@
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
-  
+
 - SCPT:
   - SCHD:
       name: Ramoram-toAld-ruhn
@@ -26,7 +26,9 @@
     - DoOnce
     - nolore
     - stop
-  - SCDT: eJxVkLFKA0EYhO9PzJIVxA1cpYJ/YalhzyBY5CwsUluFKw6WX0xQuOPkvwPJO/gmvkp8Ai2SLlVC6hTJ7i0JpJ1hhm9GAEgsmwHGMUY3IEFAQ2LyrbAfo56qkIgMU27GVFFmRswFl6fBdtsCm2pg5BJtWwF1hRYgQkxA3SKLl4wmI8Y+PkT3Ak6unI58bgsryj+YTFlU7+T9y044LNLXdJwOsi/zPNC6180/e+1gvZqtF/Nld6rO9ihlVfDkzjIslKUATyFrdjsm2ah6TAuGztJObl5g8qvw7bgCn2J81D507UN/Sh4++PfSTwcCdwzADjWkSD8=
+  - SCDT: "eJxVkLFKA0EYhO9PzJIVxA1cpYJ/YalhzyBY5CwsUluFKw6WX0xQuOPkvwPJO/gmvkp8Ai2SLlVC6hTJ7i0JpJ1hhm9GAEgsmwHGMUY3IEFAQ2Ly\
+           rbAfo56qkIgMU27GVFFmRswFl6fBdtsCm2pg5BJtWwF1hRYgQkxA3SKLl4wmI8Y+PkT3Ak6unI58bgsryj+YTFlU7+T9y044LNLXdJwOsi/zPNC6\
+           180/e+1gvZqtF/Nld6rO9ihlVfDkzjIslKUATyFrdjsm2ah6TAuGztJObl5g8qvw7bgCn2J81D507UN/Sh4++PfSTwcCdwzADjWkSD8="
   - SCTX:
     - begin Ramoram-toAld-ruhn
     - ''
@@ -70,4 +72,3 @@
     - ''
     - End Ramoram-toAld-ruhn
     - ''
-  
