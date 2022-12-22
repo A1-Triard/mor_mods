@@ -29,8 +29,103 @@
     - px
     - py
     - pz
-  - SCDT: "eJxVTrsNgCAUfE8FE7VgAAtXcARnsAEaQyGVBbExbu8RQoTq/skJ9kxy0YPSJNg3iZvI28QtTSzD5d7zhtnlcmmKvCpNmeej0pgBDIoAi+hvxpQr\
-           bfCi1BZPaFb9th774wLzB0dtH9Y="
+  - SCDT:
+      stmts:
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 4
+        - " X\n\x10X\0"
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 5
+        - " X\n\x10Y\0"
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 6
+        - " X\n\x10Z\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 4
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 5
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 6
+      - func: SetRef
+        args: player
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: SetRef
+        args: player
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 2
+      - func: SetRef
+        args: player
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 3
+      - func: StopScript
+        args: A1_Swap
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - begin A1_Swap
     - ''
@@ -67,7 +162,15 @@
         floats: 0
       data_size: 29
       var_table_size: 0
-  - SCDT: eJxTEuB68uClwvsP715+eiEjwO1oGB9cnljgmZdZwsgIANpqDNM=
+  - SCDT:
+      stmts:
+      - func: AddTopic
+        args: дай пройти
+      - func: StopScript
+        args: A1_SwapInit
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - begin A1_SwapInit
     - ''

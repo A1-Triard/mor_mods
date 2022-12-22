@@ -25,14 +25,480 @@
   - SCVR:
     - state
     - timer
-  - SCDT: "eJydlMtu00AUhjOFhjhtUxtQSiG0h9sKIjkRFyERJCRQKkFZABLZjSb2xGOwZyKPkwArnoEdS54EeCMegXEmcd2osdMoUiTb33/O/8/llBEyoAcm\
-           dDrQuosMtIkGqFQF9Qe9yybcL6OLCvhlwq0OPC6jjfThScOs4eP3+IVkrwYD6sQykRtIM1vWtOKZTBmhyrTBs6TlJXQ87bkB9jYqDwPylUYPrVKp\
-           9EdxFnSNd4S7ImzZNjyHp49OMf/+Gih9oRpXoffDVGWbbXvD3DmiJIgZvCQh8WiKtZXu++8kqJw2VV3q0K2NOf5ISeRz743vsKn5GdFOpRWE9qH3\
-           0wKx0xechiJwMaNBmKVbWfqOpvdS2iOs+WkUEI4Zc8lSHWjdVZeO/QCUkoITkT7kNrumRdshjXxJeD5c13BVxiIK89EbGt11VQSeMbOMv6752pgG\
-           ImZ+kjWv/G2N19M1GogRd2kk8UoBvIDIAvRQo1ci6opI2QmJjGmEVwodKoWHY8G9c6YgUTjizaLw841OZQ4bfaP++qdqlWYO82Of4wmJHRYWiRpa\
-           ZM5Eau0+5wvuacE+p6o8DiiJmVrsvvADWnBb9rRyS7fKP5TzQ+ar2RCpO5LANC6OToeMBGIotBV89OHt61MixR5Aty79LwxrdayOjByoW0LdZOzZ\
-           czKZY5sGqIekgJ0ZQxfUBh1aD9RpwKHEk9kKEMkwF/NQJ/xNawmWEgfW7gKR+WRmP0kuJgaqZHy1sr4aM1+L5RYN5bQr9nqmoUpqqJ2d13mGWmvn\
-           z3Y411asGS/5IfQf0SrqPw=="
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 X\x12\x10 +"
+      - func: If
+        args:
+        - 4
+        - " XЎ\x10 != 6"
+      - func: If
+        args:
+        - 2
+        - " XЎ\x10 != 7"
+      - func: StopScript
+        args: _MS_AshEffects
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 2
+        - " X\v\x11 == 1"
+      - func: StopScript
+        args: _MS_AshEffects
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " f\x01\0 < 1"
+      - func: Return
+        args: null
+      - func: Else
+        args: 77
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - ' 0'
+      - func: SetRef
+        args: player
+      - func: ModCurrentFatigue
+        args:
+          kind: Val
+          val: -2.0
+      - func: If
+        args:
+        - 1
+        - " G\tRandom100 > 95"
+      - func: SetRef
+        args: player
+      - func: ModCurrentFatigue
+        args:
+          kind: Val
+          val: -30.0
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 2
+        - " X’\x10 < -20"
+      - func: PlaySound
+        args: Health Damage
+      - func: SetRef
+        args: player
+      - func: ModCurrentHealth
+        args:
+          kind: Val
+          val: -1.0
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: If
+        args:
+        - 1
+        - " G\x0Evn_WearingLich == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\rbonemold_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x17bonemold_gah-julan_hhda == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x14devil mole crab helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\fmerisan helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\nstorm helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x0Fdemon mole crab == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x0Evelothian_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x16bonemold_founders_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\nglass_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x13redoran_master_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x0Fmorag_tong_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x16bonemold_armun-an_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x14bonemold_chuzei_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x17bonemold_gah-julan_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x14chitin_watchman_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x10chitin_mask_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x19netch_leather_boiled_helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\vchitin helm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x0Eindoril helmet == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X™\x11 o\x14cephalopod_helm_HTNK == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " G\x16sixh_playertransformed != 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 0"
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 3
+        - " X\x1F\x11, o\x16_ms_weather_ash_nohelm == 0"
+      - func: SetRef
+        args: player
+      - func: AddSpell
+        args: _ms_weather_ash_nohelm
+      - func: SetRef
+        args: player
+      - func: RemoveSpell
+        args: _ms_weather_ash
+      - func: SetRef
+        args: player
+      - func: RemoveSpell
+        args: _ms_weather_snow
+      - func: EndIf
+        args: null
+      - func: ElseIf
+        args:
+        - 5
+        - " s\x01\0 == 1"
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 3
+        - " X\x1F\x11, o\x0F_ms_weather_ash == 0"
+      - func: SetRef
+        args: player
+      - func: AddSpell
+        args: _ms_weather_ash
+      - func: SetRef
+        args: player
+      - func: RemoveSpell
+        args: _ms_weather_ash_nohelm
+      - func: SetRef
+        args: player
+      - func: RemoveSpell
+        args: _ms_weather_snow
+      - func: EndIf
+        args: null
+      - func: ElseIf
+        args:
+        - 8
+        - " s\x01\0 == 2"
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 2
+        - " X\x1F\x11, o\x0F_ms_weather_ash == 1"
+      - func: SetRef
+        args: player
+      - func: RemoveSpell
+        args: _ms_weather_ash
+      - func: SetRef
+        args: player
+      - func: RemoveSpell
+        args: _ms_weather_snow
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 2
+        - " X\x1F\x11, o\x16_ms_weather_ash_nohelm == 0"
+      - func: SetRef
+        args: player
+      - func: RemoveSpell
+        args: _ms_weather_ash_nohelm
+      - func: SetRef
+        args: player
+      - func: RemoveSpell
+        args: _ms_weather_snow
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - begin _MS_AshEffects
     - ''

@@ -30,8 +30,83 @@
   - SCVR:
     - luckMod
     - luck
-  - SCDT: "eJxlTLsJgDAUzCmJPLCIG1xhJQhJp4J72FrYpRCtXMGpjRJEsLr/GUA40XIc6WsIDHQ0zuo2nEEu3KGeVCOyjE4jQAlbz4hsSpg1zMeyDTZqJSig\
-           vzuXdv4tpoPeceos29+BALgAJe4WAA=="
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 5
+        - " XЉ\x11 == 0"
+      - func: If
+        args:
+        - 3
+        - " s\x01\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Long
+          index: 1
+        - " -1 l\x01\0 *"
+      - func: SetRef
+        args: player
+      - func: ModLuck
+        args:
+          kind: Var
+          type: Long
+          index: 1
+      - func: EndIf
+        args: null
+      - func: Else
+        args: 5
+      - func: If
+        args:
+        - 3
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Long
+          index: 1
+        - " 90 X8\x10 -"
+      - func: SetRef
+        args: player
+      - func: ModLuck
+        args:
+          kind: Var
+          type: Long
+          index: 1
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - begin A1_Sneak
     - ''

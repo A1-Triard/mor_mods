@@ -22,7 +22,17 @@
         floats: 0
       data_size: 17
       var_table_size: 0
-  - SCDT: eJzjYWQryEmsTC0yEcwXat7FyAgAJ94Epg==
+  - SCDT:
+      stmts:
+      - func: SetRef
+        args: player
+      - func: ModCurrentFatigue
+        args:
+          kind: Val
+          val: -0.001
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - Begin A1_Fatigue
     - ''

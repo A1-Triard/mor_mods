@@ -26,9 +26,103 @@
     - DoOnce
     - nolore
     - stop
-  - SCDT: "eJxVkLFKA0EYhO9PzJIVxA1cpYJ/YalhzyBY5CwsUluFKw6WX0xQuOPkvwPJO/gmvkp8Ai2SLlVC6hTJ7i0JpJ1hhm9GAEgsmwHGMUY3IEFAQ2Ly\
-           rbAfo56qkIgMU27GVFFmRswFl6fBdtsCm2pg5BJtWwF1hRYgQkxA3SKLl4wmI8Y+PkT3Ak6unI58bgsryj+YTFlU7+T9y044LNLXdJwOsi/zPNC6\
-           180/e+1gvZqtF/Nld6rO9ihlVfDkzjIslKUATyFrdjsm2ah6TAuGztJObl5g8qvw7bgCn2J81D507UN/Sh4++PfSTwcCdwzADjWkSD8="
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 1
+        - " s\x03\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 2
+        - " XЊ\x10 <= 0"
+      - func: Journal
+        args:
+        - aaa_ram_fatal_errors
+        - - 10
+          - -1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 8
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 6
+        - " X\x01\x10, r\x06Player < 512"
+      - func: If
+        args:
+        - 4
+        - " X\x01\x10 r\x0Faa_tamira_sotha < 512"
+      - func: Say
+        args:
+        - Vo\b\f\Flw_BF003.mp3
+        - спасибо.
+      - func: Journal
+        args:
+        - aaa_ram_story
+        - - 45
+          - -1
+      - func: ForceGreeting
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " Xы\x10 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Mystery
+          index: 1
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " XН\x10 d\raaa_ram_story >= 80"
+      - func: If
+        args:
+        - 1
+        - " X\x1F\x10 == 1"
+      - func: Disable
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 2
+        - " XЬ\x10 == 1"
+      raw:
+      - AB 11 01 00 24 01 09 01 01 01
   - SCTX:
     - begin Ramoram-toAld-ruhn
     - ''

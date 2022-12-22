@@ -46,11 +46,197 @@
     - DoOnce
     - PCRaceMultiplier
     - PCBirthsignMultiplier
-  - SCDT: "eJx9kl1LwmAUx3csV1bUolfohVN0V4xN8NKbJIJCiK68k2f2aMPpxBfCb9dH6CMMdSXmli9EF5X0TBdOm7GbA//z/5/fOXt4gCAmUOBOIAQ8LIWw\
-           BBxGoygF4XLz+iYWJxk1lSXxilZWC5pKi4Fp6ZaWK8X8OSnRBZREKRzx1Z2AoS7Jjr7t1TM0f5EnikbvAiivAF/QSJUWeYAtTBytn6G++KDnFIWl\
-           OGQyJ1xxT/Zzw7SsTxPf7Aa+WEbLbuNjr2NbxruBloltu97vYc3udnuGZdRemzWj94Vto978MLut/gC/LbNTbw5EjlsA4IQ5ThRZHYIgsAswDqdK\
-           O5XkJTp2ibZyI3jMsb1Q0fOVUlKWhniubbzIIsCRa9v0sUXGrnl2oIjX9++4CaMsRobEgWniXTdiOU2qSBRVU8vVX2Pg78R9t32NamlFZxf3sciT\
-           Fv+/5PaGRcnh8n9Lqygjo8dTZL146sEO+oZKPMwd4qzHMxzLNj7BxIFwhrkdoiVlbx8tkrKqj5L2hFlyCJxvX9iY1GP3NJUF+AGl4fFR"
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 1
+        - " X \x10\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 10
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: KPCMagickaMultiplier
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Global
+          name: KPCMagickaReturnBase
+        - ' 0.0250'
+      - func: Set
+        args:
+        - kind: Global
+          name: KPCMagickaReturnMult
+        - ' 0.0010'
+      - func: Set
+        args:
+        - kind: Global
+          name: KPCMagickaRegenEnabled
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X!\x11, o\bwombburn == 1"
+      - func: MessageBox
+        args:
+        - Рожденные под знаком Атронаха не могут восстанавливать магическую энергию.
+        - []
+        - []
+      - func: Else
+        args: 1
+      - func: MessageBox
+        args:
+        - '...'
+        - []
+        - []
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - ' 0'
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X!\x11, o\x15magicka mult bonus_10 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - ' 1'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X!\x11, o\x14magicka mult bonus_5 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - ' 0.5'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X!\x11, o\x15magicka mult bonus_15 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - ' 1.5'
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - ' 0'
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X!\x11, o\vfay ability == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - ' 0.5'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X!\x11, o\x0Felfborn ability == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - ' 1.5'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X!\x11, o\bwombburn == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - ' 2.0'
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Global
+          name: KPCMagickaMultiplier
+        - " 1 f\x01\0 + f\x02\0 +"
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 5
+        - " X!\x11, o\bwombburn == 0"
+      - func: If
+        args:
+        - 3
+        - " G\x16KPCMagickaRegenEnabled == 1"
+      - func: If
+        args:
+        - 1
+        - " X\x1D\x10, m\x17al_1MagickaRegeneration == 0"
+      - func: StartScript
+        args: al_1MagickaRegeneration
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: StopScript
+        args: al_1MagickaRegCheck
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - Begin al_1MagickaRegCheck
     - ''
@@ -143,11 +329,221 @@
     - TotalMagicka
     - MagickaRegenRate
     - WaitedTime
-  - SCDT: "eJx9UU1Lw0AQnUmabbcWScWLB2EORbBF3VgRD7YHFaJIoaiHXJe6kWCqJWkP/Qce/C36F52NtR9+HXaGmfd4M29WYFlSRD51OhQILEnKHbCF8jAv\
-           QY3CSqiH5vJ5kgF3PFinsHqhp3lf57m5tz0HHAo4uzZLbKDEGopRqqcmE4hVik7qL4U+k5BJag5XEHn6W/0/9P1P1Fmj6NWnU0oR4AfuIbc9y4Ay\
-           4gzm/QRW2KQLX6riu8m4BI0Vk8S2aY8Oj6hJTCe+C5ctgY4kJlO3EIoRtoqyfawUM0N5lwzN7UCnhg4W42eHUrPDKbsQ22S4uHoDyygLsSpxoGjD\
-           t5OELKpu8UnunB4suY0d2KZox6dw87p/3tMPyeBR9ybpOBmlicmoucx14YrUvgpWyDdmPMmeznRufmlbJYp2fXbW4sfTbOQ1FrrtOuuCtRjjpzWJ\
-           iB/KmHD/"
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 7
+        - " X \x10 == 1"
+      - func: If
+        args:
+        - 4
+        - " s\x02\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 4
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 5
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X8\x11€ == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " X®\x11 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 1
+        - " XЇ\x11 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: SetRef
+        args: player
+      - func: ElseIf
+        args:
+        - 2
+        - " XЊ\x10 < l\x01\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Long
+          index: 1
+        - " XЊ\x10\0"
+      - func: Else
+        args: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 8
+        - " s\x03\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 6
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 4
+        - " G\nDaysPassed s\x05\0 - 24 * s\x06\0 s\x04\0 - +"
+      - func: If
+        args:
+        - 2
+        - " f\x04\0 >= 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x04\0 3600 * G\tTimeScale /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 0"
+      - func: Return
+        args: null
+      - func: Else
+        args: 9
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 X\x12\x10 +"
+      - func: If
+        args:
+        - 6
+        - " f\x01\0 >= 1"
+      - func: If
+        args:
+        - 3
+        - " s\x01\0 == 1"
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " X&\x10 G\x14KPCMagickaMultiplier *"
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " 0.01 G\x14KPCMagickaReturnBase G\x14KPCMagickaReturnMult X)\x10 * + * f\x02\0 * f\x01\0 *"
+      - func: SetRef
+        args: player
+      raw:
+      - 33 11 66 03 00 00 09 01 05 01 66 01 00 02 20 30 09 01 09 01 01 01
   - SCTX:
     - Begin al_1MagickaRegeneration
     - ''
@@ -226,12 +622,148 @@
     - Button
     - difftize
     - timer
-  - SCDT: "eJx1ks9rE0EUx2cW0maDh0EpHozyFXqya8h68GTxUEpOFamX3GQJa1vaRmjjn+E/VXr16H0y6dAxuztmJmiEBNfZTROMxNv7Me+9z/u+2aBbPi49\
-           gt1dhBV6SUkF7SeMbFBag/OK+PNwm1Zp1V/4TY/VzuPuJ3TOTjqnhAXkWmU8VRNphjzHSA5kJkf8p8qR8oFS4EOrhBppwTPeIMSN8YiHF+W4Tdce\
-           IZ65gUD7MQtw/iA6ex8eREeueXQYH+0dx53Tcu4jti7l0zqrufjB28P91v6bKt1ckob/kDbJ1RTaDvktT5SZORM3S3T97S90NUf/H219LUmdPVyN\
-           xt34IuqdfOyuEPrUp25dH22wknJ7HthC697ecXTRirvvelEvxtO59kXSq+KD2+kVXlaoM2ql177PsHOXX16xSdhn8lVbmSj0pxDTABOrC4v/4uVW\
-           OYQ2xrpjiEQJnnCnhNEQI5m67VMI3HKhjEq1sarQyFVKJw43UygYlbheOlGvcYW+/r2upZ2ZHJlEf3wjbYN4O9c8wPexsTOkOr+rsHy4WiWtyRsk\
-           +CJtgLL8h56Mi2d6oBcvtUhktvhYjcVxQp9S+gcF6Eg1"
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 21
+        - " s\x02\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - " X\x1E\x10\0"
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == -1"
+      - func: Return
+        args: null
+      - func: ElseIf
+        args:
+        - 8
+        - " s\x01\0 == 0"
+      - func: PlaySound
+        args: menu click
+      - func: MessageBox
+        args:
+        - Динамическая регенерация магии активирована.
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' -1 1 *'
+      - func: If
+        args:
+        - 1
+        - " X\x1D\x10, m\x13al_1MagickaRegCheck == 0"
+      - func: StartScript
+        args: al_1MagickaRegCheck
+      - func: EndIf
+        args: null
+      - func: StopScript
+        args: al_MPREGEN
+      - func: ElseIf
+        args:
+        - 7
+        - " s\x01\0 == 1"
+      - func: PlaySound
+        args: menu click
+      - func: MessageBox
+        args:
+        - Вы отказались от динамической регенерации магии.
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' -1 1 *'
+      - func: StopScript
+        args: al_1MagickaRegCheck
+      - func: StopScript
+        args: al_1MagickaRegeneration
+      - func: StopScript
+        args: al_MPREGEN
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " G\fCharGenState != -1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 2
+        - " f\x01\0 < 6"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 X\x12\x10 +"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 2
+        - " s\x02\0 == 0"
+      - func: MessageBox
+        args:
+        - Хотели бы вы, чтобы ваша магия восстанавливалась со временем в зависимости от вашей расы и силы воли? В бою магия восстанавливаться не будет.
+        - []
+        - - "Да, пусть моя магия так восстанавливается.\0"
+          - "Нет, я не хочу такого восстановления магии.\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - begin al_MPREGEN
     - ''

@@ -205,9 +205,153 @@
   - SCVR:
     - hasLevitate
     - hasFire
-  - SCDT: "eJyNzt8KgjAUBvCONc2oUIigCNoj6AN4FfQCXdRdLFwizT+crcKePtcUiihkF+Mcft/hIyChZ9GAgLT0Pwa7FKziaAPM6GHt02Io+C1VTHEaRTQk\
-           JhC68E4Xhk7uqYhpB780fpogZ6pLYG4Co3OKnEpVYNZi6xu3xTU+MSH+0LbItqFHwTDhvwOOZwKDjOHlxWwgLq0rNwPUg9VrDiBhWBW57Os7DsDn\
-           JnBBv5Xnb4prrvbpg2G8K7kQEuAJJY1W+Q=="
+  - SCDT:
+      stmts:
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X\x1F\x11 o\blevitate == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X\x1F\x11 o\rwild levitate == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X\x1F\x11 o\x0Egreat levitate == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X\x1F\x11 o\nfire storm == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X\x1F\x11 o\bfireball == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 1
+        - " X\x1F\x11 o\x0EFireball_large == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: SetRef
+        args: player
+      - func: If
+        args:
+        - 7
+        - " X\x1F\x11 o\x04mark == 1"
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 1"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: aryon
+          type: Short
+          index: 3
+        - ' 1'
+      - func: Else
+        args: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: aryon
+          type: Short
+          index: 3
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: StopScript
+        args: CountWizardSpells
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - Begin CountWizardSpells
     - ''

@@ -24,8 +24,78 @@
       var_table_size: 5
   - SCVR:
     - Done
-  - SCDT: "eJyFjUEKgCAURB1TyVUKHeAfQTdFkG3tGi1aRlB0/xQiqk3LgXnvKQhLsYzTMo/rsdEQyHcKXNMORiGQa2zNJNLi5DU0FET1JHpqf/7SfAoJKMzb\
-           kaO4Jf4SuCzQAE71hBpN"
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 4
+        - " G\bGameHour >= 19"
+      - func: If
+        args:
+        - 2
+        - " s\x01\0 == 0"
+      - func: Lock
+        args: 20
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 4
+        - " G\bGameHour < 7"
+      - func: If
+        args:
+        - 2
+        - " s\x01\0 == 0"
+      - func: Lock
+        args: 20
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 5
+        - " G\bGameHour >= 7"
+      - func: If
+        args:
+        - 3
+        - " G\bGameHour < 19"
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - Begin DL_ResLock20
     - short Done
@@ -61,8 +131,78 @@
       var_table_size: 5
   - SCVR:
     - Done
-  - SCDT: "eJyFjUEKgCAURB1TyVV6gfhH0E0RZFu7RouWERTdP4WIatNyYN57CsJSLOO0zON6bDQE8p0C17SDUQjkGlszibQ4eQ0NBVE9iZ7an780n0ICCvN2\
-           5Chuib8ELgs0gBP94Bph"
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 4
+        - " G\bGameHour >= 19"
+      - func: If
+        args:
+        - 2
+        - " s\x01\0 == 0"
+      - func: Lock
+        args: 30
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 4
+        - " G\bGameHour < 7"
+      - func: If
+        args:
+        - 2
+        - " s\x01\0 == 0"
+      - func: Lock
+        args: 30
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 5
+        - " G\bGameHour >= 7"
+      - func: If
+        args:
+        - 3
+        - " G\bGameHour < 19"
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - Begin DL_ResLock30
     - short Done
@@ -98,8 +238,78 @@
       var_table_size: 5
   - SCVR:
     - Done
-  - SCDT: "eJyFjUEKgCAURB1TyVV6g38EbVEE2dau0aJlBEX3TyGi2rQcmPeegrAUyzgt87geGw2BfKfANe1gFAK5xtZMIi1OXkNDQVRPoqf25y/Np5CAwrwd\
-           OYpb4i+BywIN4AQOpxqJ"
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 4
+        - " G\bGameHour >= 19"
+      - func: If
+        args:
+        - 2
+        - " s\x01\0 == 0"
+      - func: Lock
+        args: 50
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 4
+        - " G\bGameHour < 7"
+      - func: If
+        args:
+        - 2
+        - " s\x01\0 == 0"
+      - func: Lock
+        args: 50
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 5
+        - " G\bGameHour >= 7"
+      - func: If
+        args:
+        - 3
+        - " G\bGameHour < 19"
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - Begin DL_ResLock50
     - short Done
@@ -135,8 +345,78 @@
       var_table_size: 5
   - SCVR:
     - Done
-  - SCDT: "eJyFjUEKgCAURB1TyVV6g38E3RSBtrVrtGgZQdH9U4ioNi0H5r2nICylOk3LPK7HRkMk3ytwTTsYxUiutYFJ5MXJa2goiOZJBOp+/tJ8ChmozNtR\
-           orgl/hK4ItAAThcDGp0="
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 4
+        - " G\bGameHour >= 19"
+      - func: If
+        args:
+        - 2
+        - " s\x01\0 == 0"
+      - func: Lock
+        args: 60
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 4
+        - " G\bGameHour < 7"
+      - func: If
+        args:
+        - 2
+        - " s\x01\0 == 0"
+      - func: Lock
+        args: 60
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 5
+        - " G\bGameHour >= 7"
+      - func: If
+        args:
+        - 3
+        - " G\bGameHour < 19"
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - Begin DL_ResLock60
     - short Done
@@ -188,7 +468,7 @@
   - DATA:
       flags: HAS_WATER ILLEGAL_TO_SLEEP _40
       position:
-        kind: Exterior
+        type: Exterior
         x: 17
         y: 4
   - RGNN: Azura's Coast Region
