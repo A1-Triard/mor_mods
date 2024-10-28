@@ -1,7 +1,7 @@
 - TES3:
   - HEDR:
       version: 1067869798
-      type: ESM
+      file_type: ESM
       author: Cydine / лок. Menorra / испр. A1
       description:
       - Плагин позволяет вам аккуратно раскладывать книги по полкам.

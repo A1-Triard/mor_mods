@@ -1,7 +1,7 @@
 - TES3:
   - HEDR:
       version: 1067869798
-      type: ESP
+      file_type: ESP
       author: A1 Triard
       description:
       - Перебалансирует заклинания школы Мистицизма в сторону меньшей практичности.
