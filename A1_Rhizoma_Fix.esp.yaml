@@ -5,7 +5,7 @@
       author: ''
       description:
       - ''
-      records: 1
+      records: 3
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -121,8 +121,15 @@
         args:
         - 2
         - " XЬ\x10 == 1"
-      raw:
-      - AB 11 01 00 24 01 09 01 01 01
+      - func: SetDelete
+        args: 1
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
   - SCTX:
     - begin Ramoram-toAld-ruhn
     - ''
@@ -166,3 +173,26 @@
     - ''
     - End Ramoram-toAld-ruhn
     - ''
+
+- DIAL:
+  - NAME: отдать туфли
+  - DATA: Topic
+
+- INFO:
+  - INAM: '1385790272429827157'
+  - PNAM: '1279290152061917528'
+  - NNAM: ''
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - ONAM: aa_great
+  - NAME: Да, для тебя это совсем простое задание, %PCName! Ильмени Дрен живет в Вивеке. Правда я точно не знаю где, но ты там спросишь... Я же буду в тренировочном зале гильдии.
+  - BNAM:
+    - 'player -> additem "aa_shoes_jeira" 1 '
+    - journal "aaa_FG_2" 21
+    - AddTopic "Ильмени Дрен"
+    - goodbye
